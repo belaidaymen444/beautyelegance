@@ -1,8 +1,8 @@
 <script lang="ts">
-	import logo from '../../assets/logo.png';
-	import loginIcon from '../../assets/icons/add-user.png';
-	import searchIcon from '../../assets/icons/search.png';
-	import cartIcon from '../../assets/icons/shopping-cart.png';
+	import logo from '$lib/assets/logo.png';
+	import loginIcon from '$lib/assets/icons/add-user.png';
+	import searchIcon from '$lib/assets/icons/search.png';
+	import cartIcon from '$lib/assets/icons/shopping-cart.png';
 </script>
 
 <div class="container">
