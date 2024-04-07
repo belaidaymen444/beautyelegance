@@ -1,6 +1,7 @@
 <script lang="ts">
 	import HeaderTopContainer from '$lib/components/HeaderTopContainer.svelte';
 	import Navbar from '$lib/components/Navbar.svelte';
+	import CompaniesSlider from '$lib/components/CompaniesSlider.svelte';
 	import logo from '$lib/assets/logo.png';
 	import '../app.css';
 </script>
@@ -13,4 +14,5 @@
 <header>
 	<HeaderTopContainer />
 	<Navbar />
+	<CompaniesSlider />
 </header>
