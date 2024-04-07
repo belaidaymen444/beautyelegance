@@ -38,6 +38,13 @@
 		<button on:click={moveToLeft} class="arrow left-arrow">&lt;</button>
 		<button on:click={moveToRight} class="arrow right-arrow">&gt;</button>
 	</div>
+
+	<div class="bullets-container">
+		{#each { length: photos.length } as _, j (j)}
+			<button on:click={() => (i = -j)} class="bullet" class:active-slide-bullet={Math.abs(i) === j}
+			></button>
+		{/each}
+	</div>
 </div>
 
 <style>
@@ -79,5 +86,29 @@
 	}
 	.right-arrow {
 		right: 2rem;
+	}
+
+	.bullets-container {
+		background: orange;
+		position: absolute;
+		bottom: 3%;
+		left: 50%;
+		transform: translateX(-50%);
+		display: flex;
+		gap: 1rem;
+		padding: 0.7rem;
+		border-radius: 1.2rem;
+		background: #fff;
+	}
+	.bullet {
+		width: 1rem;
+		height: 1rem;
+		border-radius: 50%;
+		border: none;
+		background: #0003;
+		cursor: pointer;
+	}
+	.active-slide-bullet {
+		background: #fa9;
 	}
 </style>
