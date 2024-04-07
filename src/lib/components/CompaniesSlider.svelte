@@ -43,6 +43,7 @@
 <style>
 	.container {
 		height: 65rem;
+		position: relative;
 	}
 
 	.imgs-container {
