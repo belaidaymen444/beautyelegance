@@ -6,7 +6,7 @@
 	const photos = [photo1, photo2, photo4];
 	let i = 0;
 
-	function moveToLeft() {
+	function moveToRight() {
 		if (-i !== photos.length - 1) {
 			i--;
 
@@ -16,7 +16,7 @@
 		i = 0;
 	}
 
-	function moveToRight() {
+	function moveToLeft() {
 		if (i !== 0) {
 			i++;
 
