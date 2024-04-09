@@ -1,3 +1,8 @@
+@font-face {
+	font-family: 'MoonTime';
+	src: url('./lib/assets/fonts/MoonTime-Regular.ttf');
+}
+
 * {
 	margin: 0;
 	padding: 0;
