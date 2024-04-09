@@ -22,4 +22,4 @@
 	<ScrollDownArrow />
 </header>
 
-<main></main>
+<main id="main"></main>
