@@ -21,3 +21,5 @@
 	<CompaniesSlider />
 	<ScrollDownArrow />
 </header>
+
+<main></main>
