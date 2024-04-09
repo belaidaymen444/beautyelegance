@@ -26,7 +26,9 @@
 	}
 
 	h1 {
-		font-style: italic;
+		font-family: 'MoonTime';
+		font-weight: lighter;
+		font-size: 6.17rem;
 	}
 
 	.icons-container {
