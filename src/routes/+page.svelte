@@ -2,6 +2,7 @@
 	import HeaderTopContainer from '$lib/components/HeaderTopContainer.svelte';
 	import Navbar from '$lib/components/Navbar.svelte';
 	import CompaniesSlider from '$lib/components/CompaniesSlider.svelte';
+	import ScrollDownArrow from '$lib/components/ScrollDownArrow.svelte';
 	import logo from '$lib/assets/logo.png';
 	import '../app.css';
 </script>
@@ -18,4 +19,5 @@
 	<HeaderTopContainer />
 	<Navbar />
 	<CompaniesSlider />
+	<ScrollDownArrow />
 </header>
