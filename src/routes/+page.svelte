@@ -22,4 +22,14 @@
 	<ScrollDownArrow />
 </header>
 
-<main id="main"></main>
+<main id="main">
+	<h3>DÉCOUVREZ!</h3>
+</main>
+
+<style>
+	main > h3:first-child {
+		text-align: center;
+		font-weight: lighter;
+		letter-spacing: 0.3rem;
+	}
+</style>
