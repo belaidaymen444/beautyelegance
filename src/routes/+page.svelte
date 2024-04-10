@@ -27,6 +27,13 @@
 </main>
 
 <style>
+	main {
+		border: 0.2rem solid rgb(243, 243, 243);
+		border-right: none;
+		border-left: none;
+		margin-top: 1.5rem;
+	}
+
 	main > h3:first-child {
 		text-align: center;
 		font-weight: lighter;
