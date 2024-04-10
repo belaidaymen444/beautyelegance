@@ -30,15 +30,5 @@
 		transform: rotate(-45deg);
 		position: relative;
 		bottom: 0.5rem;
-		animation: show-and-hide 0.8s linear infinite alternate;
-	}
-
-	@keyframes show-and-hide {
-		from {
-			opacity: 0;
-		}
-		to {
-			opacity: 1;
-		}
 	}
 </style>
