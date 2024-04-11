@@ -2,7 +2,7 @@
 	import photo1 from '$lib/assets/Sample Imgs/Products Imgs/photo_1.jpg';
 	import photo6 from '$lib/assets/Sample Imgs/Products Imgs/photo_6.jpg';
 	import photo3 from '$lib/assets/Sample Imgs/Products Imgs/photo_3.jpg';
-	import photo9 from '$lib/assets/Sample Imgs/Products Imgs/photo_9.jpg';
+	import photo9 from '$lib/assets/Sample Imgs/Products Imgs/photo_9.png';
 	import photo10 from '$lib/assets/Sample Imgs/Products Imgs/photo_10.jpg';
 	import photo11 from '$lib/assets/Sample Imgs/Products Imgs/photo_11.jpg';
 
@@ -151,6 +151,7 @@
 	.slide {
 		display: flex;
 		justify-content: space-around;
+		align-items: flex-end;
 		flex-wrap: wrap;
 		flex: 1 0 100%;
 		transition: transform 0.5s;
