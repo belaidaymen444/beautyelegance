@@ -8,7 +8,7 @@ declare global {
 		// interface PageState {}
 		// interface Platform {}
 	}
-	declare interface Product {
+	declare interface ProductProps {
 		imgUrl: string;
 		name: string;
 		description: string;

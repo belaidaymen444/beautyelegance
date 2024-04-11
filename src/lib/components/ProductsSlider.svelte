@@ -8,7 +8,7 @@
 
 	export let productsCategory: string;
 
-	const products: Product[] = [
+	const products: ProductProps[] = [
 		{
 			imgUrl: photo1,
 			name: 'nouba',
@@ -77,18 +77,7 @@
 	{#each { length: Math.ceil(products.length / 3) } as _, j (j)}
 		<div class="slide" style="transform: translateX({i * 100}%);">
 			<!-- Use only 3 products per slide -->
-			{#each products.slice(j * 3, j * 3 + 3) as product (product.name)}
-				<div class="product-details-container">
-					<div class="product-img-container">
-						<img src={product.imgUrl} alt={product.name} />
-					</div>
-					<h3>{product.name}</h3>
-					<p>{product.description}</p>
-					<span
-						>{new Intl.NumberFormat('en-US', { minimumFractionDigits: 2 }).format(product.price)} DZD</span
-					>
-				</div>
-			{/each}
+			{#each products.slice(j * 3, j * 3 + 3) as product (product.name)}{/each}
 		</div>
 	{/each}
 
@@ -148,29 +137,6 @@
 		flex-wrap: wrap;
 		flex: 1 0 100%;
 		transition: transform 0.5s;
-	}
-
-	.product-details-container {
-		text-align: center;
-	}
-	.product-details-container h3 {
-		font-family: 'Andada Pro';
-		font-weight: lighter;
-		letter-spacing: 0.2rem;
-		text-transform: uppercase;
-		color: rgb(133, 133, 133);
-		margin-bottom: 1rem;
-	}
-	.product-img-container {
-		width: 20rem;
-		min-height: 40rem;
-		display: flex;
-		align-items: flex-end;
-	}
-	.product-img-container img {
-		margin-bottom: 1.5rem;
-		width: 100%;
-		mix-blend-mode: multiply;
 	}
 
 	.bullets-container {
