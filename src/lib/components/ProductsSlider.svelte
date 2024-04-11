@@ -57,6 +57,8 @@
 
 <h2 class="products-category-title">{productsCategory}</h2>
 <div class="products-container">
+	<div class="arrow left-arrow"></div>
+	<div class="arrow right-arrow"></div>
 	{#each { length: Math.ceil(products.length / 3) } as _, i}
 		<div class="slide">
 			<!-- Use only 3 products per slide -->
@@ -91,6 +93,28 @@
 		justify-content: space-evenly;
 		margin-bottom: 9rem;
 		overflow: hidden;
+		position: relative;
+	}
+	.arrow {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 3rem;
+		height: 3rem;
+		border: 0.4rem solid #000;
+		cursor: pointer;
+	}
+	.left-arrow {
+		left: 4rem;
+		border-top: none;
+		border-right: none;
+		transform: rotate(45deg);
+	}
+	.right-arrow {
+		right: 4rem;
+		border-left: none;
+		border-bottom: none;
+		transform: rotate(45deg);
 	}
 	.slide {
 		display: flex;
