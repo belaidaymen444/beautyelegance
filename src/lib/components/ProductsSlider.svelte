@@ -5,6 +5,7 @@
 	import photo9 from '$lib/assets/Sample Imgs/Products Imgs/photo_9.png';
 	import photo10 from '$lib/assets/Sample Imgs/Products Imgs/photo_10.jpg';
 	import photo11 from '$lib/assets/Sample Imgs/Products Imgs/photo_11.jpg';
+	import Product from './Product.svelte';
 
 	export let productsCategory: string;
 
@@ -77,7 +78,9 @@
 	{#each { length: Math.ceil(products.length / 3) } as _, j (j)}
 		<div class="slide" style="transform: translateX({i * 100}%);">
 			<!-- Use only 3 products per slide -->
-			{#each products.slice(j * 3, j * 3 + 3) as product (product.name)}{/each}
+			{#each products.slice(j * 3, j * 3 + 3) as product (product.name)}
+				<Product {product} />
+			{/each}
 		</div>
 	{/each}
 
