@@ -8,13 +8,6 @@
 
 	export let productsCategory: string;
 
-	interface Product {
-		imgUrl: string;
-		name: string;
-		description: string;
-		price: number;
-	}
-
 	const products: Product[] = [
 		{
 			imgUrl: photo1,
