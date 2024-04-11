@@ -53,16 +53,38 @@
 			price: 1400
 		}
 	];
+	let i = 0;
+
+	function moveToRight() {
+		if (-i !== Math.ceil(products.length / 3) - 1) {
+			i--;
+
+			return;
+		}
+
+		i = 0;
+	}
+
+	function moveToLeft() {
+		if (i !== 0) {
+			i++;
+
+			return;
+		}
+
+		i = -(Math.ceil(products.length / 3) - 1);
+	}
 </script>
 
 <h2 class="products-category-title">{productsCategory}</h2>
 <div class="products-container">
-	<div class="arrow left-arrow"></div>
-	<div class="arrow right-arrow"></div>
-	{#each { length: Math.ceil(products.length / 3) } as _, i}
-		<div class="slide">
+	<button class="arrow left-arrow" on:click={moveToLeft}></button>
+	<button class="arrow right-arrow" on:click={moveToRight}></button>
+
+	{#each { length: Math.ceil(products.length / 3) } as _, j (j)}
+		<div class="slide" style="transform: translateX({i * 100}%);">
 			<!-- Use only 3 products per slide -->
-			{#each products.slice(i * 3, i * 3 + 3) as product (product.name)}
+			{#each products.slice(j * 3, j * 3 + 3) as product (product.name)}
 				<div class="product-details-container">
 					<div class="product-img-container">
 						<img src={product.imgUrl} alt={product.name} />
@@ -91,9 +113,10 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-evenly;
-		margin-bottom: 9rem;
+		margin-bottom: 5rem;
 		overflow: hidden;
 		position: relative;
+		min-height: 60rem;
 	}
 	.arrow {
 		position: absolute;
@@ -102,7 +125,9 @@
 		width: 3rem;
 		height: 3rem;
 		border: 0.4rem solid #000;
+		background: none;
 		cursor: pointer;
+		z-index: 1;
 	}
 	.left-arrow {
 		left: 4rem;
@@ -121,6 +146,7 @@
 		justify-content: space-around;
 		flex-wrap: wrap;
 		flex: 1 0 100%;
+		transition: transform 0.5s;
 	}
 
 	.product-details-container {
