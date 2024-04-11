@@ -98,6 +98,13 @@
 			{/each}
 		</div>
 	{/each}
+
+	<div class="bullets-container">
+		{#each { length: Math.ceil(products.length / 3) } as _, j (j)}
+			<button on:click={() => (i = -j)} class="bullet" class:active-slide-bullet={Math.abs(i) === j}
+			></button>
+		{/each}
+	</div>
 </div>
 
 <style>
@@ -170,5 +177,29 @@
 		margin-bottom: 1.5rem;
 		width: 100%;
 		mix-blend-mode: multiply;
+	}
+
+	.bullets-container {
+		background: orange;
+		position: absolute;
+		bottom: 0%;
+		left: 50%;
+		transform: translateX(-50%);
+		display: flex;
+		gap: 1rem;
+		padding: 0.7rem;
+		border-radius: 1.2rem;
+		background: rgb(255, 243, 237);
+	}
+	.bullet {
+		width: 1rem;
+		height: 1rem;
+		border-radius: 50%;
+		border: none;
+		background: #fff;
+		cursor: pointer;
+	}
+	.active-slide-bullet {
+		background: #fa9;
 	}
 </style>
