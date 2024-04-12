@@ -5,9 +5,10 @@
 	export let productsCategory: string;
 
 	let i = 0;
+	let productsLength = $products[productsCategory.toLowerCase()].length;
 
 	function moveToRight() {
-		if (-i !== Math.ceil($products.length / 3) - 1) {
+		if (-i !== Math.ceil(productsLength / 3) - 1) {
 			i--;
 
 			return;
@@ -23,7 +24,7 @@
 			return;
 		}
 
-		i = -(Math.ceil($products.length / 3) - 1);
+		i = -(Math.ceil(productsLength / 3) - 1);
 	}
 </script>
 
@@ -32,17 +33,17 @@
 	<button class="arrow left-arrow" on:click={moveToLeft}></button>
 	<button class="arrow right-arrow" on:click={moveToRight}></button>
 
-	{#each { length: Math.ceil($products.length / 3) } as _, j (j)}
+	{#each { length: Math.ceil(productsLength / 3) } as _, j (j)}
 		<div class="slide" style="transform: translateX({i * 100}%);">
 			<!-- Use only 3 products per slide -->
-			{#each $products.slice(j * 3, j * 3 + 3) as product (product.name)}
+			{#each $products[productsCategory.toLowerCase()].slice(j * 3, j * 3 + 3) as product (product.name)}
 				<Product {product} />
 			{/each}
 		</div>
 	{/each}
 
 	<div class="bullets-container">
-		{#each { length: Math.ceil($products.length / 3) } as _, j (j)}
+		{#each { length: Math.ceil(productsLength / 3) } as _, j (j)}
 			<button on:click={() => (i = -j)} class="bullet" class:active-slide-bullet={Math.abs(i) === j}
 			></button>
 		{/each}
