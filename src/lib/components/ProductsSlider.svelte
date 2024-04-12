@@ -1,56 +1,13 @@
 <script lang="ts">
-	import photo1 from '$lib/assets/Sample Imgs/Products Imgs/photo_1.jpg';
-	import photo6 from '$lib/assets/Sample Imgs/Products Imgs/photo_6.jpg';
-	import photo3 from '$lib/assets/Sample Imgs/Products Imgs/photo_3.jpg';
-	import photo9 from '$lib/assets/Sample Imgs/Products Imgs/photo_9.png';
-	import photo10 from '$lib/assets/Sample Imgs/Products Imgs/photo_10.jpg';
-	import photo11 from '$lib/assets/Sample Imgs/Products Imgs/photo_11.jpg';
+	import { products } from '$lib/stores/products_store';
 	import Product from './Product.svelte';
 
 	export let productsCategory: string;
 
-	const products: ProductProps[] = [
-		{
-			imgUrl: photo1,
-			name: 'nouba',
-			description: 'Rouge à lèvres mat',
-			price: 2000
-		},
-		{
-			imgUrl: photo6,
-			name: 'bourjois',
-			description: 'Fond de teint 123 30ml',
-			price: 950
-		},
-		{
-			imgUrl: photo3,
-			name: 'maybelline',
-			description: 'Rouge à lèvres mat',
-			price: 1400
-		},
-		{
-			imgUrl: photo9,
-			name: 'foo',
-			description: 'Rouge à lèvres mat',
-			price: 2000
-		},
-		{
-			imgUrl: photo10,
-			name: 'bar',
-			description: 'Fond de teint 123 30ml',
-			price: 950
-		},
-		{
-			imgUrl: photo11,
-			name: 'baz',
-			description: 'Rouge à lèvres mat',
-			price: 1400
-		}
-	];
 	let i = 0;
 
 	function moveToRight() {
-		if (-i !== Math.ceil(products.length / 3) - 1) {
+		if (-i !== Math.ceil($products.length / 3) - 1) {
 			i--;
 
 			return;
@@ -66,7 +23,7 @@
 			return;
 		}
 
-		i = -(Math.ceil(products.length / 3) - 1);
+		i = -(Math.ceil($products.length / 3) - 1);
 	}
 </script>
 
@@ -75,17 +32,17 @@
 	<button class="arrow left-arrow" on:click={moveToLeft}></button>
 	<button class="arrow right-arrow" on:click={moveToRight}></button>
 
-	{#each { length: Math.ceil(products.length / 3) } as _, j (j)}
+	{#each { length: Math.ceil($products.length / 3) } as _, j (j)}
 		<div class="slide" style="transform: translateX({i * 100}%);">
 			<!-- Use only 3 products per slide -->
-			{#each products.slice(j * 3, j * 3 + 3) as product (product.name)}
+			{#each $products.slice(j * 3, j * 3 + 3) as product (product.name)}
 				<Product {product} />
 			{/each}
 		</div>
 	{/each}
 
 	<div class="bullets-container">
-		{#each { length: Math.ceil(products.length / 3) } as _, j (j)}
+		{#each { length: Math.ceil($products.length / 3) } as _, j (j)}
 			<button on:click={() => (i = -j)} class="bullet" class:active-slide-bullet={Math.abs(i) === j}
 			></button>
 		{/each}
