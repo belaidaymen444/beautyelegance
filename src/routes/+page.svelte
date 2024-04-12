@@ -40,9 +40,17 @@
 	</div>
 </main>
 
-<footer></footer>
+<footer>
+	<h2 class="footer-title">A propose de nous</h2>
+</footer>
 
 <style>
+	.footer-title {
+		font-family: 'Abril Fatface';
+		font-weight: lighter;
+		text-align: center;
+	}
+
 	main {
 		border: 0.2rem solid rgb(243, 243, 243);
 		border-right: none;
