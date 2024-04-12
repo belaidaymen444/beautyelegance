@@ -40,6 +40,8 @@
 	</div>
 </main>
 
+<footer></footer>
+
 <style>
 	main {
 		border: 0.2rem solid rgb(243, 243, 243);
