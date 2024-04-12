@@ -1,10 +1,10 @@
 import { writable } from 'svelte/store';
 import photo1 from '$lib/assets/Sample Imgs/Products Imgs/photo_1.jpg';
 import photo6 from '$lib/assets/Sample Imgs/Products Imgs/photo_6.jpg';
-import photo3 from '$lib/assets/Sample Imgs/Products Imgs/photo_3.jpg';
 import photo9 from '$lib/assets/Sample Imgs/Products Imgs/photo_9.png';
 import photo10 from '$lib/assets/Sample Imgs/Products Imgs/photo_10.jpg';
 import photo11 from '$lib/assets/Sample Imgs/Products Imgs/photo_11.jpg';
+import photo14 from '$lib/assets/Sample Imgs/Products Imgs/photo_14.png';
 
 export const products = writable<ProductProps[]>([
 	{
@@ -20,7 +20,7 @@ export const products = writable<ProductProps[]>([
 		price: 950
 	},
 	{
-		imgUrl: photo3,
+		imgUrl: photo14,
 		name: 'maybelline',
 		description: 'Rouge à lèvres mat',
 		price: 1400
@@ -33,13 +33,13 @@ export const products = writable<ProductProps[]>([
 	},
 	{
 		imgUrl: photo10,
-		name: 'bar',
+		name: 'nouba',
 		description: 'Fond de teint 123 30ml',
 		price: 950
 	},
 	{
 		imgUrl: photo11,
-		name: 'baz',
+		name: 'bourjois',
 		description: 'Rouge à lèvres mat',
 		price: 1400
 	}
