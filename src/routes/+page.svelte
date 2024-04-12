@@ -48,6 +48,7 @@
 		border-right: none;
 		border-left: none;
 		margin-top: 1.5rem;
+		padding-bottom: 4rem;
 	}
 
 	main > h3:first-child {
