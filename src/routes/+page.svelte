@@ -35,6 +35,9 @@
 	<h3>DÉCOUVREZ!</h3>
 	<ProductsSlider productsCategory="maquillage" />
 	<ProductsSlider productsCategory="others" />
+	<div class="voir-plus-btn-container">
+		<a href="/" class="voir-plus-btn">voir plus</a>
+	</div>
 </main>
 
 <style>
@@ -49,5 +52,28 @@
 		text-align: center;
 		font-weight: lighter;
 		letter-spacing: 0.3rem;
+	}
+
+	.voir-plus-btn-container {
+		display: flex;
+		justify-content: center;
+		margin-bottom: 2rem;
+		margin-top: 7rem;
+	}
+	.voir-plus-btn {
+		font-family: 'Andada Pro';
+		color: #000;
+		text-decoration: none;
+		font-size: 2rem;
+		background: #f1dada;
+		padding: 0.5em 2.7em;
+		transition: 0.3s;
+		outline: 0.2rem solid transparent;
+	}
+	.voir-plus-btn:hover {
+		--text-color: #eec8c8;
+		outline-color: var(--text-color);
+		background: #fff;
+		color: var(--text-color);
 	}
 </style>
