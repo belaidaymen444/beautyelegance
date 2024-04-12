@@ -3,6 +3,7 @@
 	import Navbar from '$lib/components/Navbar.svelte';
 	import CompaniesSlider from '$lib/components/CompaniesSlider.svelte';
 	import ScrollDownArrow from '$lib/components/ScrollDownArrow.svelte';
+	import ProductsSlider from '$lib/components/ProductsSlider.svelte';
 	import logo from '$lib/assets/logo.png';
 	import '../app.css';
 </script>
@@ -32,6 +33,8 @@
 
 <main id="main">
 	<h3>DÉCOUVREZ!</h3>
+	<ProductsSlider productsCategory="maquillage" />
+	<ProductsSlider productsCategory="others" />
 </main>
 
 <style>
