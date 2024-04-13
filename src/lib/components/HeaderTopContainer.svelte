@@ -38,7 +38,7 @@
 	}
 
 	img.logo {
-		width: 9rem;
+		width: 7rem;
 	}
 
 	img:not(.logo) {
