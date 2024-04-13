@@ -13,11 +13,11 @@
 			<h1>Beaute & Elegance</h1>
 			<div class="bottom-container">
 				<div class="left-icons-container icons-container">
-					<div class="hamburger-icon" on:click={() => ($shouldVerticalNavbarAppear = true)}>
+					<button class="hamburger-icon" on:click={() => ($shouldVerticalNavbarAppear = true)}>
 						<div class="bar"></div>
 						<div class="bar"></div>
 						<div class="bar"></div>
-					</div>
+					</button>
 					<img src={searchIcon} alt="search" />
 				</div>
 				<img src={logo} alt="logo" class="logo" />
@@ -104,6 +104,8 @@
 			flex-direction: column;
 			gap: 0.6rem;
 			cursor: pointer;
+			background: none;
+			border: none;
 		}
 		.bar {
 			width: 3rem;
