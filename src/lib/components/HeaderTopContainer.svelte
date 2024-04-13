@@ -4,6 +4,7 @@
 	import searchIcon from '$lib/assets/icons/search.png';
 	import cartIcon from '$lib/assets/icons/shopping-cart.png';
 	import MediaQuery from 'svelte-media-queries';
+	import { shouldVerticalNavbarAppear } from '$lib/stores/navbar_visibility_store';
 </script>
 
 <MediaQuery query="(max-width: 950px)" let:matches>
@@ -12,7 +13,7 @@
 			<h1>Beaute & Elegance</h1>
 			<div class="bottom-container">
 				<div class="left-icons-container icons-container">
-					<div class="hamburger-icon">
+					<div class="hamburger-icon" on:click={() => ($shouldVerticalNavbarAppear = true)}>
 						<div class="bar"></div>
 						<div class="bar"></div>
 						<div class="bar"></div>

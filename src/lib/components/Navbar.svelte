@@ -1,6 +1,7 @@
 <script lang="ts">
 	import MediaQuery from 'svelte-media-queries';
 	import closeIcon from '$lib/assets/icons/close.png';
+	import { shouldVerticalNavbarAppear } from '$lib/stores/navbar_visibility_store';
 
 	const navLinksTexts = [
 		'PROMOTION',
@@ -13,16 +14,12 @@
 	];
 
 	let navbar: HTMLElement;
-
-	function hideNavbar(): void {
-		navbar.style.transform = 'translateX(-100%)';
-	}
 </script>
 
 <MediaQuery query="(max-width: 950px)" let:matches>
-	<nav bind:this={navbar}>
+	<nav bind:this={navbar} class:hidden-nav={matches && !$shouldVerticalNavbarAppear}>
 		{#if matches}
-			<button class="close-btn" on:click={hideNavbar}>
+			<button class="close-btn" on:click={() => ($shouldVerticalNavbarAppear = false)}>
 				<img src={closeIcon} alt="close" class="close-icon" />
 			</button>
 			<div class="seperator"></div>
@@ -63,8 +60,11 @@
 			left: 0;
 			background: #fff;
 			z-index: 999;
-			transform: translateX(-100%);
 			transition: transform 0.3s;
+		}
+
+		.hidden-nav {
+			transform: translateX(-100%);
 		}
 
 		.close-btn {
