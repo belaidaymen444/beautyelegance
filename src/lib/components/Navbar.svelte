@@ -11,12 +11,20 @@
 		'SOINS',
 		'DEO & STICK'
 	];
+
+	let navbar: HTMLElement;
+
+	function hideNavbar(): void {
+		navbar.style.transform = 'translateX(-100%)';
+	}
 </script>
 
 <MediaQuery query="(max-width: 950px)" let:matches>
-	<nav>
+	<nav bind:this={navbar}>
 		{#if matches}
-			<img src={closeIcon} alt="close" class="close-icon" />
+			<button class="close-btn" on:click={hideNavbar}>
+				<img src={closeIcon} alt="close" class="close-icon" />
+			</button>
 			<div class="seperator"></div>
 		{/if}
 		<ul>
@@ -55,14 +63,21 @@
 			left: 0;
 			background: #fff;
 			z-index: 999;
+			transform: translateX(-100%);
+			transition: transform 0.3s;
+		}
+
+		.close-btn {
+			position: absolute;
+			top: 2rem;
+			right: 2rem;
+			background: none;
+			border: none;
+			cursor: pointer;
 		}
 
 		.close-icon {
-			position: absolute;
 			width: 3rem;
-			right: 2rem;
-			top: 2rem;
-			cursor: pointer;
 		}
 
 		.seperator {
