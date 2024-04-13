@@ -48,12 +48,10 @@
 		<InfoContainer />
 		<FeaturesContainer />
 	</div>
+	<div class="copyright-container">&copy; 2024 Beaute & Elegance. All rights reserved.</div>
 </footer>
 
 <style>
-	footer {
-		padding-bottom: 10rem;
-	}
 	.footer-title {
 		font-family: 'Abril Fatface';
 		font-weight: lighter;
@@ -64,6 +62,13 @@
 		margin-top: 5rem;
 		align-items: start;
 		justify-content: space-evenly;
+	}
+	.copyright-container {
+		margin-top: 8rem;
+		min-height: 5rem;
+		background: #f0d9d9;
+		display: grid;
+		place-content: center;
 	}
 
 	main {
