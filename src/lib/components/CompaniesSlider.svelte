@@ -51,7 +51,8 @@
 
 <style>
 	.container {
-		height: 65rem;
+		height: 70vw;
+		max-height: 65rem;
 		position: relative;
 	}
 
@@ -68,7 +69,7 @@
 	.bullets-container {
 		background: orange;
 		position: absolute;
-		bottom: 3%;
+		bottom: 1.5rem;
 		left: 50%;
 		transform: translateX(-50%);
 		display: flex;
