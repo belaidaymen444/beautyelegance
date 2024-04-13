@@ -6,6 +6,8 @@
 	import ProductsSlider from '$lib/components/ProductsSlider.svelte';
 	import logo from '$lib/assets/logo.png';
 	import '../app.css';
+	import FeaturesContainer from '$lib/components/FeaturesContainer.svelte';
+	import InfoContainer from '$lib/components/InfoContainer.svelte';
 </script>
 
 <svelte:head>
@@ -42,13 +44,26 @@
 
 <footer>
 	<h2 class="footer-title">A propose de nous</h2>
+	<div class="container">
+		<InfoContainer />
+		<FeaturesContainer />
+	</div>
 </footer>
 
 <style>
+	footer {
+		padding-bottom: 10rem;
+	}
 	.footer-title {
 		font-family: 'Abril Fatface';
 		font-weight: lighter;
 		text-align: center;
+	}
+	footer .container {
+		display: flex;
+		margin-top: 5rem;
+		align-items: start;
+		justify-content: space-evenly;
 	}
 
 	main {
