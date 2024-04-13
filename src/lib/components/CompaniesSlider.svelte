@@ -2,6 +2,8 @@
 	import photo1 from '$lib/assets/Sample Imgs/Top Slider Imgs/photo_1.png';
 	import photo2 from '$lib/assets/Sample Imgs/Top Slider Imgs/photo_2.jpg';
 	import photo4 from '$lib/assets/Sample Imgs/Top Slider Imgs/photo_4.jpg';
+	import LeftArrow from './LeftArrow.svelte';
+	import RightArrow from './RightArrow.svelte';
 
 	const photos = [photo1, photo2, photo4];
 	let i = 0;
@@ -35,8 +37,8 @@
 	</div>
 
 	<div class="arrows-container">
-		<button on:click={moveToLeft} class="arrow left-arrow">&lt;</button>
-		<button on:click={moveToRight} class="arrow right-arrow">&gt;</button>
+		<LeftArrow on:click={moveToLeft} />
+		<RightArrow on:click={moveToRight} />
 	</div>
 
 	<div class="bullets-container">
@@ -61,31 +63,6 @@
 	img {
 		min-width: 100%;
 		transition: transform 0.7s;
-	}
-
-	.arrow {
-		position: absolute;
-		top: 50%;
-		transform: translateY(-50%);
-		background: #fa9;
-		display: grid;
-		place-content: center;
-		width: 7rem;
-		height: 7rem;
-		border-radius: 50%;
-		font-size: 4rem;
-		cursor: pointer;
-		border: none;
-	}
-	.arrow:hover {
-		background: #fff;
-		border: 0.2rem solid #fa9;
-	}
-	.left-arrow {
-		left: 2rem;
-	}
-	.right-arrow {
-		right: 2rem;
 	}
 
 	.bullets-container {

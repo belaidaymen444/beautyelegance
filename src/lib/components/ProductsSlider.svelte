@@ -1,5 +1,7 @@
 <script lang="ts">
 	import { products } from '$lib/stores/products_store';
+	import LeftArrow from './LeftArrow.svelte';
+	import RightArrow from './RightArrow.svelte';
 	import Product from './Product.svelte';
 
 	export let productsCategory: string;
@@ -30,8 +32,8 @@
 
 <h2 class="products-category-title">{productsCategory}</h2>
 <div class="products-container">
-	<button class="arrow left-arrow" on:click={moveToLeft}></button>
-	<button class="arrow right-arrow" on:click={moveToRight}></button>
+	<LeftArrow on:click={moveToLeft} />
+	<RightArrow on:click={moveToRight} />
 
 	{#each { length: Math.ceil(productsLength / 3) } as _, j (j)}
 		<div class="slide" style="transform: translateX({i * 100}%);">
@@ -67,29 +69,6 @@
 		overflow: hidden;
 		position: relative;
 		min-height: 60rem;
-	}
-	.arrow {
-		position: absolute;
-		top: 50%;
-		transform: translateY(-50%);
-		width: 3rem;
-		height: 3rem;
-		border: 0.4rem solid #000;
-		background: none;
-		cursor: pointer;
-		z-index: 1;
-	}
-	.left-arrow {
-		left: 4rem;
-		border-top: none;
-		border-right: none;
-		transform: rotate(45deg);
-	}
-	.right-arrow {
-		right: 4rem;
-		border-left: none;
-		border-bottom: none;
-		transform: rotate(45deg);
 	}
 	.slide {
 		display: flex;
