@@ -6,8 +6,7 @@
 		'CHEVEUX',
 		'PARFUMS',
 		'SOINS',
-		'DEO & STICK',
-		'A PROPOSE DE NOUS'
+		'DEO & STICK'
 	];
 </script>
 
