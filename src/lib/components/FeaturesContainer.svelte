@@ -27,10 +27,6 @@
 </div>
 
 <style>
-	.features-container {
-		margin-left: auto;
-	}
-
 	ul {
 		list-style-type: none;
 		display: flex;
