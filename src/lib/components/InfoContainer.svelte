@@ -2,34 +2,43 @@
 	import logo from '$lib/assets/logo.png';
 	import facebookIcon from '$lib/assets/icons/facebook.png';
 	import instagramIcon from '$lib/assets/icons/instagram.png';
+	import MediaQuery from 'svelte-media-queries';
 </script>
 
-<div class="info-container">
-	<img src={logo} alt="logo" />
+<MediaQuery query="(max-width: 1050px)" let:matches>
+	<div class="info-container">
+		{#if !matches}
+			<img src={logo} alt="logo" />
+		{/if}
 
-	<div class="info-text">
-		<h1>Beaute & Elegance</h1>
+		<div class="info-text">
+			<h1>Beaute & Elegance</h1>
 
-		<ul>
-			<li>boutique spécialisée dans la vente matériel et produit de coiffure et cosmétique</li>
-			<li>11, avenue Chakib arselane a coté sonelgaze</li>
-			<li>tél: 06 67 30 42 04</li>
-		</ul>
+			{#if matches}
+				<img src={logo} alt="logo" />
+			{/if}
 
-		<ul class="social-media-icons-container">
-			<li>
-				<a href="https://www.facebook.com">
-					<img src={facebookIcon} alt="facebook" title="facebook" />
-				</a>
-			</li>
-			<li>
-				<a href="https://www.instagram.com">
-					<img src={instagramIcon} alt="instagram" title="instagram" />
-				</a>
-			</li>
-		</ul>
+			<ul>
+				<li>boutique spécialisée dans la vente matériel et produit de coiffure et cosmétique</li>
+				<li>11, avenue Chakib arselane a coté sonelgaze</li>
+				<li>tél: 06 67 30 42 04</li>
+			</ul>
+
+			<ul class="social-media-icons-container">
+				<li>
+					<a href="https://www.facebook.com">
+						<img src={facebookIcon} alt="facebook" title="facebook" />
+					</a>
+				</li>
+				<li>
+					<a href="https://www.instagram.com">
+						<img src={instagramIcon} alt="instagram" title="instagram" />
+					</a>
+				</li>
+			</ul>
+		</div>
 	</div>
-</div>
+</MediaQuery>
 
 <style>
 	.info-container {
@@ -73,5 +82,21 @@
 		width: 3.5rem;
 		cursor: pointer;
 		color: rebeccapurple;
+	}
+
+	@media screen and (max-width: 1050px) {
+		.info-container {
+			display: flex;
+			align-items: center;
+			flex-direction: column;
+			gap: 7rem;
+		}
+		img[alt='logo'] {
+			margin-bottom: 4rem;
+		}
+
+		.info-text ul:first-of-type {
+			width: 30rem;
+		}
 	}
 </style>
