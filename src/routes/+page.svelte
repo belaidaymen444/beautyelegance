@@ -62,6 +62,9 @@
 		margin-top: 5rem;
 		align-items: start;
 		justify-content: space-evenly;
+		gap: 4rem;
+		flex-wrap: wrap;
+		padding-inline: 3rem;
 	}
 	.copyright-container {
 		margin-top: 8rem;
