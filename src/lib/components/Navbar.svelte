@@ -60,7 +60,6 @@
 			left: 0;
 			background: #fff;
 			z-index: 999;
-			transition: transform 0.3s;
 		}
 
 		.hidden-nav {
