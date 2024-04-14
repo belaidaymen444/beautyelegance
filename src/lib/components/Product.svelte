@@ -1,8 +1,20 @@
 <script lang="ts">
+	import transparentHeartIcon from '$lib/assets/icons/heart-transparent.svg';
+	import redHeartIcon from '$lib/assets/icons/heart-red.svg';
+
 	export let product: ProductProps;
+
+	let favorite = false;
 </script>
 
 <div class="product-details-container">
+	<button class="favorite-btn" on:click={() => (favorite = !favorite)}>
+		{#if favorite}
+			<img src={redHeartIcon} alt="red-heart" />
+		{:else}
+			<img src={transparentHeartIcon} alt="transparent-heart" />
+		{/if}
+	</button>
 	<div class="product-img-container">
 		<img src={product.imgUrl} alt={product.name} />
 	</div>
@@ -17,7 +29,29 @@
 <style>
 	.product-details-container {
 		text-align: center;
+		position: relative;
 	}
+
+	.favorite-btn {
+		position: absolute;
+		width: 4.5rem;
+		height: 4.5rem;
+		right: 0;
+		top: 1.5rem;
+		right: 2rem;
+		border-radius: 50%;
+		padding: 2rem;
+		display: grid;
+		place-content: center;
+		border: none;
+		background: #f0eeee;
+		cursor: pointer;
+	}
+	.favorite-btn img {
+		width: 2.7rem;
+		height: 2.7rem;
+	}
+
 	.product-details-container h3 {
 		font-family: 'Andada Pro';
 		font-weight: lighter;
