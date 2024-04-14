@@ -27,14 +27,16 @@
 		margin-bottom: 1rem;
 	}
 	.product-img-container {
-		width: 20rem;
-		min-height: 40rem;
+		width: 35rem;
+		height: 35rem;
 		display: flex;
-		align-items: flex-end;
+		align-items: center;
+		justify-content: center;
+		background: #fafafa;
+		margin-bottom: 1.5rem;
 	}
 	.product-img-container img {
-		margin-bottom: 1.5rem;
-		width: 100%;
+		width: 15rem;
 		mix-blend-mode: multiply;
 	}
 
