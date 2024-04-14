@@ -18,17 +18,22 @@
 	<div class="product-img-container">
 		<img src={product.imgUrl} alt={product.name} />
 	</div>
-	<h3>{product.name}</h3>
-	<p>{product.description}</p>
-	<span
-		>{new Intl.NumberFormat('en-US', { minimumFractionDigits: 2 }).format(product.price)} DZD</span
-	>
+
+	<div class="product-details-text-container">
+		<div class="product_name-and-description-container">
+			<h3>{product.name}</h3>
+			<p>{product.description}</p>
+		</div>
+		<span class="price-text"
+			>{new Intl.NumberFormat('en-US', { minimumFractionDigits: 2 }).format(product.price)} DZD</span
+		>
+	</div>
+
 	<button class="ajouter-btn">Ajouter</button>
 </div>
 
 <style>
 	.product-details-container {
-		text-align: center;
 		position: relative;
 	}
 
@@ -52,14 +57,6 @@
 		height: 2.7rem;
 	}
 
-	.product-details-container h3 {
-		font-family: 'Andada Pro';
-		font-weight: lighter;
-		letter-spacing: 0.2rem;
-		text-transform: uppercase;
-		color: rgb(133, 133, 133);
-		margin-bottom: 1rem;
-	}
 	.product-img-container {
 		width: 35rem;
 		height: 35rem;
@@ -74,6 +71,29 @@
 		mix-blend-mode: multiply;
 	}
 
+	.product-details-text-container {
+		display: flex;
+		flex-direction: column;
+		align-items: start;
+	}
+	.product-details-text-container h3 {
+		font-family: 'Andada Pro';
+		font-weight: lighter;
+		letter-spacing: 0.2rem;
+		text-transform: uppercase;
+		margin-bottom: 0.3em;
+	}
+	.product-details-text-container p {
+		color: rgb(133, 133, 133);
+	}
+	.product_name-and-description-container {
+		margin-bottom: 2em;
+	}
+	.price-text {
+		font-weight: bold;
+		margin-bottom: 1em;
+	}
+
 	.ajouter-btn {
 		font-family: 'Andada Pro';
 		color: #000;
@@ -86,7 +106,6 @@
 		display: block;
 		border: none;
 		margin: auto;
-		margin-top: 4rem;
 		cursor: pointer;
 		width: 100%;
 	}
