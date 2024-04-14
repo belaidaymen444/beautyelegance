@@ -11,6 +11,7 @@
 	<span
 		>{new Intl.NumberFormat('en-US', { minimumFractionDigits: 2 }).format(product.price)} DZD</span
 	>
+	<button class="ajouter-btn">Ajouter</button>
 </div>
 
 <style>
@@ -35,5 +36,28 @@
 		margin-bottom: 1.5rem;
 		width: 100%;
 		mix-blend-mode: multiply;
+	}
+
+	.ajouter-btn {
+		font-family: 'Andada Pro';
+		color: #000;
+		text-decoration: none;
+		font-size: 2rem;
+		background: #f1dada;
+		padding: 0.5em 2.7em;
+		transition: 0.3s;
+		outline: 0.2rem solid transparent;
+		display: block;
+		border: none;
+		margin: auto;
+		margin-top: 4rem;
+		cursor: pointer;
+		width: 100%;
+	}
+	.ajouter-btn:hover {
+		--text-color: #eec8c8;
+		outline-color: var(--text-color);
+		background: #fff;
+		color: var(--text-color);
 	}
 </style>
