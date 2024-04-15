@@ -30,13 +30,37 @@ export const products = writable<Record<string, ProductProps[]>>({
 		},
 		{
 			imgUrl: photo4,
-			name: 'nouba',
+			name: 'fosca',
 			description: 'Fond de teint 123 30ml',
 			price: 950
 		},
 		{
 			imgUrl: photo13,
-			name: 'nouba',
+			name: 'ilisa',
+			description: 'Fond de teint 123 30ml',
+			price: 950
+		},
+		{
+			imgUrl: photo7,
+			name: 'akicha',
+			description: 'Fond de teint 123 30ml',
+			price: 950
+		},
+		{
+			imgUrl: photo8,
+			name: 'pizza',
+			description: 'Fond de teint 123 30ml',
+			price: 950
+		},
+		{
+			imgUrl: photo9,
+			name: 'burger',
+			description: 'Fond de teint 123 30ml',
+			price: 950
+		},
+		{
+			imgUrl: photo12,
+			name: 'burito',
 			description: 'Fond de teint 123 30ml',
 			price: 950
 		}
@@ -98,13 +122,13 @@ export const products = writable<Record<string, ProductProps[]>>({
 		},
 		{
 			imgUrl: photo11,
-			name: 'nouba',
+			name: 'fosca',
 			description: 'Fond de teint 123 30ml',
 			price: 950
 		},
 		{
 			imgUrl: photo14,
-			name: 'nouba',
+			name: 'citina',
 			description: 'Fond de teint 123 30ml',
 			price: 950
 		}
