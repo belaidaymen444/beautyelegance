@@ -58,7 +58,6 @@
 	}
 
 	.product-img-container {
-		width: 35rem;
 		height: 35rem;
 		display: flex;
 		align-items: center;
