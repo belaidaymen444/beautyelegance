@@ -60,6 +60,11 @@
 			left: 0;
 			background: #fff;
 			z-index: 999;
+			overflow-y: scroll;
+			transition: transform 0.4s;
+		}
+		nav::-webkit-scrollbar {
+			display: none;
 		}
 
 		.hidden-nav {
@@ -67,12 +72,17 @@
 		}
 
 		.close-btn {
-			position: absolute;
-			top: 2rem;
-			right: 2rem;
-			background: none;
+			position: fixed;
+			background: #fff;
 			border: none;
 			cursor: pointer;
+			width: 100%;
+			height: 6rem;
+			display: flex;
+			justify-content: end;
+			align-items: center;
+			padding-right: 1.5rem;
+			z-index: 9;
 		}
 
 		.close-icon {
@@ -82,7 +92,7 @@
 		.seperator {
 			width: 100%;
 			height: 0.3rem;
-			position: absolute;
+			position: fixed;
 			top: 6rem;
 			left: 0;
 			background: #000;
@@ -91,14 +101,16 @@
 		nav ul {
 			flex-direction: column;
 			justify-content: center;
-			gap: 5rem;
-			min-height: 100%;
+			gap: 2rem;
 			padding: 0;
+			margin-bottom: 20rem;
 			padding-left: 2rem;
+			top: 10rem;
+			position: relative;
 		}
 
 		li a {
-			font-size: 2.5rem;
+			font-size: 2.4rem;
 		}
 
 		ul li {
