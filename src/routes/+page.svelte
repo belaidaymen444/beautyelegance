@@ -37,9 +37,9 @@
 	<h3>DÉCOUVREZ!</h3>
 	<ProductsGrid productsCategory="maquillage" />
 	<ProductsGrid productsCategory="cheveux" />
-	<ProductsGrid productsCategory="visage" />
+	<!-- <ProductsGrid productsCategory="visage" />
 	<ProductsGrid productsCategory="corps & bain" />
-	<ProductsGrid productsCategory="deo & stick" />
+	<ProductsGrid productsCategory="deo & stick" /> -->
 	<div class="voir-plus-btn-container">
 		<a href="/" class="voir-plus-btn">voir plus</a>
 	</div>
