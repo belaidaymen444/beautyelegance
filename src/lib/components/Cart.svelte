@@ -1,6 +1,7 @@
 <script lang="ts">
 	import closeIcon from '$lib/assets/icons/close.png';
 	import cartIcon from '$lib/assets/icons/shopping-cart.png';
+	import { cart } from '$lib/stores/cart_store';
 </script>
 
 <div class="cart">
@@ -10,6 +11,12 @@
 		<button class="close-btn">
 			<img src={closeIcon} alt="close" />
 		</button>
+	</div>
+
+	<div class="cart__products-container">
+		{#if $cart.length === 0}
+			<p class="cart__empty-cart-text">votre panier est vide</p>
+		{/if}
 	</div>
 </div>
 
@@ -23,13 +30,14 @@
 		width: 40rem;
 		z-index: 999;
 		border-left: 0.3rem solid #0008;
+		display: grid;
+		grid-template-rows: 10rem auto;
 	}
 
 	.cart__top-container {
 		display: flex;
 		align-items: center;
 		background: #c6b0b0;
-		height: 10rem;
 		padding-inline: 2rem;
 		border-bottom: 0.2rem solid #0008;
 	}
@@ -54,5 +62,17 @@
 	}
 	.cart__top-container img[alt='close'] {
 		width: 2.7rem;
+	}
+
+	.cart__products-container {
+		position: relative;
+	}
+
+	.cart__empty-cart-text {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		font-size: 2rem;
 	}
 </style>
