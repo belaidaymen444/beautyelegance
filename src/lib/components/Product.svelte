@@ -35,6 +35,7 @@
 <style>
 	.product-details-container {
 		position: relative;
+		height: 50rem;
 	}
 
 	.favorite-btn {
@@ -58,7 +59,7 @@
 	}
 
 	.product-img-container {
-		height: 35rem;
+		height: 60%;
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -66,7 +67,10 @@
 		margin-bottom: 1.5rem;
 	}
 	.product-img-container img {
-		width: 15rem;
+		width: 92%;
+		height: 92%;
+		max-width: 25rem;
+		object-fit: scale-down;
 		mix-blend-mode: multiply;
 	}
 
@@ -87,6 +91,7 @@
 	}
 	.product_name-and-description-container {
 		margin-bottom: 2em;
+		height: 7rem;
 	}
 	.price-text {
 		font-weight: bold;
