@@ -36,6 +36,7 @@
 <main id="main">
 	<h3>DÉCOUVREZ!</h3>
 	<ProductsSlider productsCategory="maquillage" />
+	<ProductsSlider productsCategory="cheveux" />
 	<div class="voir-plus-btn-container">
 		<a href="/" class="voir-plus-btn">voir plus</a>
 	</div>
