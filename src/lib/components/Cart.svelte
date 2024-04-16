@@ -2,6 +2,7 @@
 	import closeIcon from '$lib/assets/icons/close.png';
 	import cartIcon from '$lib/assets/icons/shopping-cart.png';
 	import { cart } from '$lib/stores/cart_store';
+	import CartProduct from './CartProduct.svelte';
 </script>
 
 <div class="cart">
@@ -16,6 +17,10 @@
 	<div class="cart__products-container">
 		{#if $cart.length === 0}
 			<p class="cart__empty-cart-text">votre panier est vide</p>
+		{:else}
+			{#each $cart as product (product.name)}
+				<CartProduct {product} />
+			{/each}
 		{/if}
 	</div>
 </div>
