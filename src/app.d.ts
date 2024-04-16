@@ -14,6 +14,9 @@ declare global {
 		description: string;
 		price: number;
 	}
+	declare interface CartProductProps extends ProductProps {
+		quantity: number;
+	}
 }
 
 export {};
