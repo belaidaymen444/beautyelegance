@@ -15,6 +15,8 @@
 		} else {
 			$cart.push({ ...product, quantity: 1 });
 		}
+
+		$cart = $cart;
 	}
 </script>
 
