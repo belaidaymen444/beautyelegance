@@ -1,5 +1,5 @@
 <script lang="ts">
-	export let product: ProductProps & { quantity: number };
+	export let product: CartProductProps;
 </script>
 
 <div class="cart__product-container">
