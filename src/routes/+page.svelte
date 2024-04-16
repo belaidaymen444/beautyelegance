@@ -3,7 +3,7 @@
 	import Navbar from '$lib/components/Navbar.svelte';
 	import CompaniesSlider from '$lib/components/CompaniesSlider.svelte';
 	import ScrollDownArrow from '$lib/components/ScrollDownArrow.svelte';
-	import ProductsSlider from '$lib/components/ProductsSlider.svelte';
+	import ProductsGrid from '$lib/components/ProductsGrid.svelte';
 	import logo from '$lib/assets/logo.png';
 	import '../app.css';
 	import FeaturesContainer from '$lib/components/FeaturesContainer.svelte';
@@ -35,8 +35,8 @@
 
 <main id="main">
 	<h3>DÉCOUVREZ!</h3>
-	<ProductsSlider productsCategory="maquillage" />
-	<ProductsSlider productsCategory="cheveux" />
+	<ProductsGrid productsCategory="maquillage" />
+	<ProductsGrid productsCategory="cheveux" />
 	<div class="voir-plus-btn-container">
 		<a href="/" class="voir-plus-btn">voir plus</a>
 	</div>
