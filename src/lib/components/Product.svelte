@@ -1,10 +1,21 @@
 <script lang="ts">
 	import transparentHeartIcon from '$lib/assets/icons/heart-transparent.svg';
 	import redHeartIcon from '$lib/assets/icons/heart-red.svg';
+	import { cart } from '$lib/stores/cart_store';
 
 	export let product: ProductProps;
 
 	let favorite = false;
+
+	function addProductToCart() {
+		const productInCart = $cart.find((productInCart) => productInCart.name === product.name);
+
+		if (productInCart) {
+			productInCart.quantity += 1;
+		} else {
+			$cart.push({ ...product, quantity: 1 });
+		}
+	}
 </script>
 
 <div class="product-details-container">
@@ -29,7 +40,7 @@
 		>
 	</div>
 
-	<button class="ajouter-btn">Ajouter</button>
+	<button class="ajouter-btn" on:click={addProductToCart}>Ajouter</button>
 </div>
 
 <style>
