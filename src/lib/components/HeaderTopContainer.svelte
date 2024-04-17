@@ -18,21 +18,21 @@
 						<div class="bar"></div>
 						<div class="bar"></div>
 					</button>
-					<img src={searchIcon} alt="search" />
+					<button class="search-btn"> <img src={searchIcon} alt="search" /></button>
 				</div>
 				<img src={logo} alt="logo" class="logo" />
 				<div class="right-icons-container icons-container">
-					<img src={loginIcon} alt="login" />
-					<img src={cartIcon} alt="shopping-cart" />
+					<button class="login-btn"><img src={loginIcon} alt="login" /></button>
+					<button class="shopping-cart-btn"><img src={cartIcon} alt="shopping-cart" /></button>
 				</div>
 			</div>
 		{:else}
 			<img src={logo} alt="logo" class="logo" />
 			<h1>Beaute & Elegance</h1>
 			<div class="icons-container">
-				<img src={loginIcon} alt="login" />
-				<img src={searchIcon} alt="search" />
-				<img src={cartIcon} alt="shopping-cart" />
+				<button class="login-btn"><img src={loginIcon} alt="login" /></button>
+				<button class="search-btn"> <img src={searchIcon} alt="search" /></button>
+				<button class="shopping-cart-btn"><img src={cartIcon} alt="shopping-cart" /></button>
 			</div>
 		{/if}
 	</div>
@@ -58,6 +58,10 @@
 		display: flex;
 		align-items: center;
 		gap: 3rem;
+	}
+	.icons-container button {
+		background: none;
+		border: none;
 	}
 
 	img.logo {
