@@ -139,5 +139,6 @@
 		position: fixed;
 		z-index: 9;
 		width: 100%;
+		box-shadow: 0 0 3rem #0002;
 	}
 </style>
