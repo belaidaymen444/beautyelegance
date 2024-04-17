@@ -42,9 +42,7 @@
 	<!-- <ProductsGrid productsCategory="visage" />
 	<ProductsGrid productsCategory="corps & bain" />
 	<ProductsGrid productsCategory="deo & stick" /> -->
-	<div class="voir-plus-btn-container">
-		<a href="/" class="voir-plus-btn">voir plus</a>
-	</div>
+	<button class="voir-plus-btn"> voir plus </button>
 </main>
 
 <footer>
@@ -93,12 +91,6 @@
 		letter-spacing: 0.3rem;
 	}
 
-	.voir-plus-btn-container {
-		display: flex;
-		justify-content: center;
-		margin-bottom: 2rem;
-		margin-top: 7rem;
-	}
 	.voir-plus-btn {
 		font-family: 'Andada Pro';
 		color: #000;
@@ -108,6 +100,12 @@
 		padding: 0.5em 2.7em;
 		transition: 0.3s;
 		outline: 0.2rem solid transparent;
+		display: block;
+		margin: auto;
+		margin-bottom: 2rem;
+		margin-top: 7rem;
+		border: none;
+		cursor: pointer;
 	}
 	.voir-plus-btn:hover {
 		--text-color: #eec8c8;
