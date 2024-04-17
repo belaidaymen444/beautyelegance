@@ -58,6 +58,9 @@
 		background: #c6b0b0;
 		padding-inline: 2rem;
 		border-bottom: 0.2rem solid #0008;
+		position: sticky;
+		top: 0;
+		z-index: 10;
 	}
 
 	.cart__top-container img[alt='panier'] {
