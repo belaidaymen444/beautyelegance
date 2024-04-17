@@ -39,6 +39,13 @@
 		display: grid;
 		grid-template-rows: 10rem auto;
 		transition: transform 0.2s;
+		overflow-y: scroll;
+	}
+	.cart::-webkit-scrollbar {
+		width: 0.5rem;
+	}
+	.cart::-webkit-scrollbar-thumb {
+		background: #8a6565;
 	}
 
 	.hidden-cart {
