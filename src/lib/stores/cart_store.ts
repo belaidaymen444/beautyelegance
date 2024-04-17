@@ -28,7 +28,9 @@ function createCartStore(): CartStore {
 					if (allQuantites) {
 						prevCart.splice(prevCart.indexOf(productInCart), 1);
 					} else {
-						productInCart.quantity -= 1;
+						if (productInCart.quantity > 0) {
+							productInCart.quantity -= 1;
+						}
 					}
 				}
 
