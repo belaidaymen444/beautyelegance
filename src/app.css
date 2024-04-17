@@ -24,3 +24,13 @@ html {
 body {
 	font-size: 1.6rem;
 }
+
+::-webkit-scrollbar {
+	width: 0.8rem;
+}
+::-webkit-scrollbar-thumb {
+	background: #b37777;
+}
+::-webkit-scrollbar-track {
+	background: rgb(216, 207, 191);
+}
