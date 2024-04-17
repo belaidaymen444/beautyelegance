@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { cart } from '$lib/stores/cart_store';
+
 	export let product: CartProductProps;
 </script>
 
@@ -14,12 +16,14 @@
 
 		<div class="cart__product-quantity-container-and-supprimer-btn">
 			<div class="cart__product-quantity-container">
-				<button class="remove-btn">-</button>
+				<button class="remove-btn" on:click={() => cart.remove(product, false)}>-</button>
 				<div class="cart__product-quantity">{product.quantity}</div>
-				<button class="add-btn">+</button>
+				<button class="add-btn" on:click={() => cart.add(product)}>+</button>
 			</div>
 
-			<button class="cart__supprimer-btn">Supprimer</button>
+			<button class="cart__supprimer-btn" on:click={() => cart.remove(product, true)}
+				>Supprimer</button
+			>
 		</div>
 	</div>
 </div>
