@@ -54,8 +54,11 @@
 		class="voir-plus-btn"
 		bind:this={voirPlusBtn}
 		on:click={() => {
-			hiddenContentContainer.style.display = 'contents';
 			voirPlusBtn.style.display = 'none';
+			hiddenContentContainer.style.display = 'block';
+			setTimeout(() => {
+				hiddenContentContainer.style.transform = 'translateX(0)';
+			});
 		}}
 	>
 		voir plus
@@ -133,6 +136,8 @@
 
 	.hidden-content-container {
 		display: none;
+		transition: transform 0.4s;
+		transform: translateX(-100%);
 	}
 
 	.fixed {
