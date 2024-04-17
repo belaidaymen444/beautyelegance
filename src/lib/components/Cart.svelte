@@ -33,7 +33,7 @@
 		background: #fff;
 		right: 0;
 		top: 0;
-		width: 40rem;
+		width: 50rem;
 		z-index: 9;
 		border-left: 0.3rem solid #0008;
 		display: grid;
