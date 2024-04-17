@@ -6,18 +6,6 @@
 	export let product: ProductProps;
 
 	let favorite = false;
-
-	function addProductToCart() {
-		const productInCart = $cart.find((productInCart) => productInCart.name === product.name);
-
-		if (productInCart) {
-			productInCart.quantity += 1;
-		} else {
-			$cart.push({ ...product, quantity: 1 });
-		}
-
-		$cart = $cart;
-	}
 </script>
 
 <div class="product-details-container">
@@ -42,7 +30,7 @@
 		>
 	</div>
 
-	<button class="ajouter-btn" on:click={addProductToCart}>Ajouter</button>
+	<button class="ajouter-btn" on:click={() => cart.add(product)}>Ajouter</button>
 </div>
 
 <style>
