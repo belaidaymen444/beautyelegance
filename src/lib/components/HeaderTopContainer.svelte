@@ -5,6 +5,7 @@
 	import cartIcon from '$lib/assets/icons/shopping-cart.png';
 	import MediaQuery from 'svelte-media-queries';
 	import { shouldVerticalNavbarAppear } from '$lib/stores/navbar_visibility_store';
+	import { shouldCartSidebarAppear } from '$lib/stores/cart_visibility_store';
 </script>
 
 <MediaQuery query="(max-width: 950px)" let:matches>
@@ -23,7 +24,9 @@
 				<img src={logo} alt="logo" class="logo" />
 				<div class="right-icons-container icons-container">
 					<button class="login-btn"><img src={loginIcon} alt="login" /></button>
-					<button class="shopping-cart-btn"><img src={cartIcon} alt="shopping-cart" /></button>
+					<button on:click={() => ($shouldCartSidebarAppear = true)} class="shopping-cart-btn"
+						><img src={cartIcon} alt="shopping-cart" /></button
+					>
 				</div>
 			</div>
 		{:else}
@@ -32,7 +35,9 @@
 			<div class="icons-container">
 				<button class="login-btn"><img src={loginIcon} alt="login" /></button>
 				<button class="search-btn"> <img src={searchIcon} alt="search" /></button>
-				<button class="shopping-cart-btn"><img src={cartIcon} alt="shopping-cart" /></button>
+				<button on:click={() => ($shouldCartSidebarAppear = true)} class="shopping-cart-btn">
+					<img src={cartIcon} alt="shopping-cart" /></button
+				>
 			</div>
 		{/if}
 	</div>
