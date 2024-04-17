@@ -2,14 +2,15 @@
 	import closeIcon from '$lib/assets/icons/close.png';
 	import cartIcon from '$lib/assets/icons/shopping-cart.png';
 	import { cart } from '$lib/stores/cart_store';
+	import { shouldCartSidebarAppear } from '$lib/stores/cart_visibility_store';
 	import CartProduct from './CartProduct.svelte';
 </script>
 
-<div class="cart">
+<div class="cart" class:hidden-cart={!$shouldCartSidebarAppear}>
 	<div class="cart__top-container">
 		<img src={cartIcon} alt="panier" />
 		<h2>Panier</h2>
-		<button class="close-btn">
+		<button class="close-btn" on:click={() => ($shouldCartSidebarAppear = false)}>
 			<img src={closeIcon} alt="close" />
 		</button>
 	</div>
@@ -37,6 +38,11 @@
 		border-left: 0.3rem solid #0008;
 		display: grid;
 		grid-template-rows: 10rem auto;
+		transition: transform 0.2s;
+	}
+
+	.hidden-cart {
+		transform: translateX(100%);
 	}
 
 	.cart__top-container {
