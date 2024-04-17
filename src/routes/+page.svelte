@@ -9,6 +9,9 @@
 	import FeaturesContainer from '$lib/components/FeaturesContainer.svelte';
 	import InfoContainer from '$lib/components/InfoContainer.svelte';
 	import Cart from '$lib/components/Cart.svelte';
+
+	let hiddenContentContainer: HTMLDivElement;
+	let voirPlusBtn: HTMLButtonElement;
 </script>
 
 <svelte:head>
@@ -39,10 +42,22 @@
 	<h3>DÉCOUVREZ!</h3>
 	<ProductsGrid productsCategory="maquillage" />
 	<ProductsGrid productsCategory="cheveux" />
-	<!-- <ProductsGrid productsCategory="visage" />
-	<ProductsGrid productsCategory="corps & bain" />
-	<ProductsGrid productsCategory="deo & stick" /> -->
-	<button class="voir-plus-btn"> voir plus </button>
+	<div class="hidden-content-container" bind:this={hiddenContentContainer}>
+		<ProductsGrid productsCategory="visage" />
+		<ProductsGrid productsCategory="corps & bain" />
+		<ProductsGrid productsCategory="deo & stick" />
+	</div>
+
+	<button
+		class="voir-plus-btn"
+		bind:this={voirPlusBtn}
+		on:click={() => {
+			hiddenContentContainer.style.display = 'contents';
+			voirPlusBtn.style.display = 'none';
+		}}
+	>
+		voir plus
+	</button>
 </main>
 
 <footer>
@@ -112,5 +127,9 @@
 		outline-color: var(--text-color);
 		background: #fff;
 		color: var(--text-color);
+	}
+
+	.hidden-content-container {
+		display: none;
 	}
 </style>
