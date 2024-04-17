@@ -93,9 +93,11 @@
 		outline-color: var(--text-color);
 		background: #fff;
 		color: var(--text-color);
-		border: 1px solid;
+		border: 0.2rem solid;
 		cursor: pointer;
 		transition: 0.3s;
+		font-size: 1.5rem;
+		font-weight: bold;
 	}
 	.cart__supprimer-btn:hover {
 		background: var(--text-color);
