@@ -27,173 +27,127 @@ export const products = writable<Record<string, ProductProps[]>>({
 	cheveux: [
 		{
 			imgUrl: photo1,
-			name: 'viola',
+			name: ' viola noir',
 			description: 'Masque pour cheveux 350ml ',
-			price: 950
+			price: 450
 		},
 		{
 			imgUrl: photo3,
-			name: 'nouba',
-			description: 'Fond de teint 123 30ml',
-			price: 950
+			name: 'viola',
+			description: 'serum pour cheveux reparateur',
+			price: 500
 		},
 		{
 			imgUrl: photo4,
-			name: 'fosca',
-			description: 'Fond de teint 123 30ml',
-			price: 950
+			name: 'flux care ',
+			description: 'shampoing sans sulfate -color fix-',
+			price: 300
 		},
 		{
 			imgUrl: photo13,
-			name: 'ilisa',
-			description: 'Fond de teint 123 30ml',
-			price: 950
+			name: 'flux care1',
+			description: 'shampoig fleur de coton',
+			price: 250
 		},
-		{
-			imgUrl: photo7,
-			name: 'akicha',
-			description: 'Fond de teint 123 30ml',
-			price: 950
-		},
-		{
-			imgUrl: photo8,
-			name: 'pizza',
-			description: 'Fond de teint 123 30ml',
-			price: 950
-		},
-		{
-			imgUrl: photo9,
-			name: 'burger',
-			description: 'Fond de teint 123 30ml',
-			price: 950
-		},
-		{
-			imgUrl: photo12,
-			name: 'burito',
-			description: 'Fond de teint 123 30ml',
-			price: 950
-		},
-		{
-			imgUrl: photo15,
-			name: 'vamila',
-			description: 'Masque pour cheveux 350ml',
-			price: 950
-		},
-		{
-			imgUrl: photo16,
-			name: 'kasiko',
-			description: 'Fond de teint 123 30ml',
-			price: 950
-		},
+
 		{
 			imgUrl: photo17,
-			name: 'bakin',
-			description: 'Fond de teint 123 30ml',
-			price: 950
+			name: 'callidearm',
+			description: 'apres-shampoing garlic cheveux sec ',
+			price: 350
 		},
-		{
-			imgUrl: photo18,
-			name: 'maxie',
-			description: 'Fond de teint 123 30ml',
-			price: 950
-		},
+
 		{
 			imgUrl: photo19,
-			name: 'fomate',
-			description: 'Fond de teint 123 30ml',
-			price: 950
-		},
-		{
-			imgUrl: photo20,
-			name: 'procosta',
-			description: 'Fond de teint 123 30ml',
-			price: 950
-		},
-		{
-			imgUrl: photo21,
-			name: 'ekasta',
-			description: 'Fond de teint 123 30ml',
-			price: 950
-		},
-		{
-			imgUrl: photo22,
-			name: 'bamoda',
-			description: 'Fond de teint 123 30ml',
-			price: 950
-		},
-		{
-			imgUrl: photo23,
-			name: 'zibra',
-			description: 'Fond de teint 123 30ml',
-			price: 950
+			name: 'gracias',
+			description: 'shampoing sans sulfate 250ml',
+			price: 550
 		}
 	],
 	visage: [
 		{
 			imgUrl: photo2,
-			name: 'nouba',
-			description: 'Fond de teint 123 30ml',
-			price: 950
+			name: 'venus',
+			description: 'eau mecellaire 250 ml',
+			price: 300
 		},
 		{
 			imgUrl: photo6,
-			name: 'pachoka',
-			description: 'Fond de teint 123 30ml',
-			price: 950
+			name: 'polycos',
+			description: "masque pour visage huile d'argant",
+			price: 530
+		},
+		{
+			imgUrl: photo16,
+			name: 'abusaad',
+			description: "gommage d'abricots pour visage 150ml ",
+			price: 350
 		}
 	],
 	'corps & bain': [
 		{
 			imgUrl: photo5,
-			name: 'sadasd',
-			description: 'Fond de teint 123 30ml',
-			price: 950
+			name: 'dermactive',
+			description: 'gommage citron pour corps 350ml',
+			price: 720
+		},
+		{
+			imgUrl: photo15,
+			name: 'venus-',
+			description: 'creme anti-rides',
+			price: 300
+		},
+		{
+			imgUrl: photo18,
+			name: 'venus2',
+			description: 'gel douche sans paraben 240ml',
+			price: 140
 		}
 	],
 	'deo & stick': [
 		{
-			imgUrl: photo7,
-			name: 'aded',
-			description: 'Fond de teint 123 30ml',
-			price: 950
+			imgUrl: photo12,
+			name: 'nevia',
+			description: 'stick nevia extra bright',
+			price: 750
 		},
 		{
 			imgUrl: photo8,
-			name: 'cseq',
-			description: 'Fond de teint 123 30ml',
-			price: 950
+			name: 'dove1',
+			description: 'stick dove original',
+			price: 850
 		},
 		{
 			imgUrl: photo9,
-			name: 'csdace',
-			description: 'Fond de teint 123 30ml',
-			price: 950
+			name: 'dove ',
+			description: 'deo dove original 0% alcchol',
+			price: 850
 		},
 		{
-			imgUrl: photo12,
-			name: 'sdeasd',
-			description: 'Fond de teint 123 30ml',
-			price: 950
+			imgUrl: photo7,
+			name: 'flux care -',
+			description: 'deo enjoing 48h protection',
+			price: 280
 		}
 	],
 	maquillage: [
 		{
 			imgUrl: photo10,
 			name: 'nouba',
-			description: 'Fond de teint 123 30ml',
-			price: 950
+			description: 'rougr a levre nouba',
+			price: 2500
 		},
 		{
 			imgUrl: photo11,
-			name: 'fosca',
+			name: 'bourjois',
 			description: 'Fond de teint 123 30ml',
-			price: 950
+			price: 1050
 		},
 		{
 			imgUrl: photo14,
-			name: 'citina',
-			description: 'Fond de teint 123 30ml',
-			price: 950
+			name: 'maybelin',
+			description: 'mascara noir',
+			price: 1600
 		}
 	]
 });
