@@ -89,4 +89,10 @@
 		transform: translate(-50%, -50%);
 		font-size: 2rem;
 	}
+
+	@media (max-width: 550px) {
+		.cart {
+			width: 100%;
+		}
+	}
 </style>
