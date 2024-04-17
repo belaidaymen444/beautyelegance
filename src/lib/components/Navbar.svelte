@@ -33,6 +33,10 @@
 </MediaQuery>
 
 <style>
+	nav {
+		background: #fff;
+	}
+
 	nav ul {
 		display: flex;
 		justify-content: space-around;
