@@ -36,6 +36,7 @@
 		justify-items: center;
 		width: 100%;
 		min-height: 18rem;
+		gap: 2rem;
 	}
 
 	.cart__product-img {
