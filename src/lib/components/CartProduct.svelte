@@ -104,4 +104,10 @@
 		background: var(--text-color);
 		color: #fff;
 	}
+
+	@media (max-width: 400px) {
+		.cart__product-container {
+			grid-template-columns: unset;
+		}
+	}
 </style>
