@@ -137,7 +137,7 @@ export const products = writable<Record<string, ProductProps[]>>({
 		},
 		{
 			imgUrl: photo6,
-			name: 'nouba',
+			name: 'pachoka',
 			description: 'Fond de teint 123 30ml',
 			price: 950
 		}
@@ -145,7 +145,7 @@ export const products = writable<Record<string, ProductProps[]>>({
 	'corps & bain': [
 		{
 			imgUrl: photo5,
-			name: 'nouba',
+			name: 'sadasd',
 			description: 'Fond de teint 123 30ml',
 			price: 950
 		}
@@ -153,25 +153,25 @@ export const products = writable<Record<string, ProductProps[]>>({
 	'deo & stick': [
 		{
 			imgUrl: photo7,
-			name: 'nouba',
+			name: 'aded',
 			description: 'Fond de teint 123 30ml',
 			price: 950
 		},
 		{
 			imgUrl: photo8,
-			name: 'nouba',
+			name: 'cseq',
 			description: 'Fond de teint 123 30ml',
 			price: 950
 		},
 		{
 			imgUrl: photo9,
-			name: 'nouba',
+			name: 'csdace',
 			description: 'Fond de teint 123 30ml',
 			price: 950
 		},
 		{
 			imgUrl: photo12,
-			name: 'nouba',
+			name: 'sdeasd',
 			description: 'Fond de teint 123 30ml',
 			price: 950
 		}
