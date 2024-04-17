@@ -80,6 +80,7 @@
 		display: flex;
 		flex-direction: column;
 		padding: 1rem;
+		gap: 2rem;
 	}
 
 	.cart__empty-cart-text {
