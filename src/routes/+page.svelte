@@ -8,6 +8,7 @@
 	import '../app.css';
 	import FeaturesContainer from '$lib/components/FeaturesContainer.svelte';
 	import InfoContainer from '$lib/components/InfoContainer.svelte';
+	import Cart from '$lib/components/Cart.svelte';
 </script>
 
 <svelte:head>
@@ -31,6 +32,7 @@
 	<Navbar />
 	<CompaniesSlider />
 	<ScrollDownArrow />
+	<Cart />
 </header>
 
 <main id="main">
