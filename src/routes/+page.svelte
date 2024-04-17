@@ -31,8 +31,10 @@
 </svelte:head>
 
 <header>
-	<HeaderTopContainer />
-	<Navbar />
+	<div class="fixed">
+		<HeaderTopContainer />
+		<Navbar />
+	</div>
 	<CompaniesSlider />
 	<ScrollDownArrow />
 	<Cart />
@@ -131,5 +133,11 @@
 
 	.hidden-content-container {
 		display: none;
+	}
+
+	.fixed {
+		position: fixed;
+		z-index: 9;
+		width: 100%;
 	}
 </style>
