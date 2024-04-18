@@ -33,7 +33,7 @@
 		background: #fff;
 		right: 0;
 		top: 0;
-		width: 50rem;
+		width: min(50rem, 100%);
 		z-index: 9;
 		border-left: 0.3rem solid #0008;
 		display: grid;
@@ -99,11 +99,5 @@
 		left: 50%;
 		transform: translate(-50%, -50%);
 		font-size: 2rem;
-	}
-
-	@media (max-width: 550px) {
-		.cart {
-			width: 100%;
-		}
 	}
 </style>
