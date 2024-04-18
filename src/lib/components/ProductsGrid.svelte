@@ -30,7 +30,7 @@
 		align-items: start;
 		align-content: center;
 		gap: 2rem;
-		width: 96%;
+		width: 90%;
 		margin: auto;
 	}
 
