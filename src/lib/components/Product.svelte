@@ -53,6 +53,7 @@
 		border: none;
 		background: #f0eeee;
 		cursor: pointer;
+		z-index: 1;
 	}
 	.favorite-btn img {
 		width: 2.7rem;
