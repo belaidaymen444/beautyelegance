@@ -11,7 +11,11 @@
 <MediaQuery query="(max-width: 950px)" let:matches>
 	<div class="container">
 		{#if matches}
-			<h1>Beaute & Elegance</h1>
+			<MediaQuery query="(min-width: 590px) and (max-width: 950px)" let:matches>
+				{#if !matches}
+					<h1>Beaute & Elegance</h1>
+				{/if}
+			</MediaQuery>
 			<div class="bottom-container">
 				<div class="left-icons-container icons-container">
 					<button class="hamburger-icon" on:click={() => ($shouldVerticalNavbarAppear = true)}>
@@ -21,7 +25,16 @@
 					</button>
 					<button class="search-btn"> <img src={searchIcon} alt="search" /></button>
 				</div>
-				<img src={logo} alt="logo" class="logo" />
+				<MediaQuery query="(min-width: 590px) and (max-width: 950px)" let:matches>
+					{#if matches}
+						<div class="title-and-logo-container">
+							<h1>Beaute & Elegance</h1>
+							<img src={logo} alt="logo" class="logo" />
+						</div>
+					{:else}
+						<img src={logo} alt="logo" class="logo" />
+					{/if}
+				</MediaQuery>
 				<div class="right-icons-container icons-container">
 					<button class="login-btn"><img src={loginIcon} alt="login" /></button>
 					<button on:click={() => ($shouldCartSidebarAppear = true)} class="shopping-cart-btn"
@@ -125,6 +138,45 @@
 
 		.icons-container {
 			gap: 1.2rem;
+		}
+	}
+
+	@media (max-width: 365px) {
+		.container {
+			gap: 1.2rem;
+		}
+
+		h1 {
+			font-size: 4.5rem;
+		}
+
+		img.logo {
+			width: 5.5rem;
+		}
+
+		img:not(.logo) {
+			width: 3rem;
+			height: 3rem;
+		}
+
+		img[alt='shopping-cart'] {
+			transform: rotateY(180deg);
+			width: 3.5rem;
+			height: 3.5rem;
+		}
+	}
+
+	@media (min-width: 590px) and (max-width: 950px) {
+		.container {
+			height: 12rem;
+			padding-block: 1rem;
+		}
+
+		.title-and-logo-container {
+			display: flex;
+			flex-direction: row-reverse;
+			align-items: center;
+			gap: 2rem;
 		}
 	}
 </style>
