@@ -16,7 +16,7 @@
 			<h2>Connexion</h2>
 
 			<div class="signup-login-pages-btns-container">
-				<button class="login-page-btn" on:click={goToConnexionForm}>connexion</button>
+				<button class="login-page-btn selected-tab" on:click={goToConnexionForm}>connexion</button>
 				<button class="signup-page-btn" on:click={goToInscriptionForm}>inscription</button>
 			</div>
 
@@ -24,7 +24,7 @@
 				<label>
 					<span>Adresse e-mail</span>
 					<br />
-					<input type="email" name="email" placeholder="exemple@gmail.com" required />
+					<input type="email" name="email" required />
 				</label>
 
 				<label>
@@ -47,7 +47,9 @@
 
 			<div class="signup-login-pages-btns-container">
 				<button class="login-page-btn" on:click={goToConnexionForm}>connexion</button>
-				<button class="signup-page-btn" on:click={goToInscriptionForm}>inscription</button>
+				<button class="signup-page-btn selected-tab" on:click={goToInscriptionForm}
+					>inscription</button
+				>
 			</div>
 
 			<form>
@@ -120,13 +122,15 @@
 		cursor: pointer;
 	}
 	.signup-login-pages-btns-container .login-page-btn {
-		background: #f1dada;
 		border-top-left-radius: 3rem;
 		border-bottom-left-radius: 3rem;
 	}
 	.signup-login-pages-btns-container .signup-page-btn {
 		border-top-right-radius: 3rem;
 		border-bottom-right-radius: 3rem;
+	}
+	.signup-login-pages-btns-container .selected-tab {
+		background: #f1dada;
 	}
 
 	form {
