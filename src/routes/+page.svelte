@@ -77,7 +77,7 @@
 		border: 0.2rem solid rgb(243, 243, 243);
 		border-right: none;
 		border-left: none;
-		margin-top: 1.5rem;
+		margin-top: 6rem;
 		padding-bottom: 4rem;
 	}
 
