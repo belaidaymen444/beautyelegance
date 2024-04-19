@@ -4,6 +4,7 @@
 	import ConnexionForm from './ConnexionForm.svelte';
 	import InscriptionForm from './InscriptionForm.svelte';
 	import SignupLoginPagesBtns from './SignupLoginPagesBtns.svelte';
+	import { fade } from 'svelte/transition';
 
 	let selectedTab: 'connexion' | 'inscription' = 'inscription';
 
@@ -17,7 +18,7 @@
 </script>
 
 {#if $shouldSignupLoginAppear}
-	<div class="full-screen-container">
+	<div transition:fade={{ duration: 200 }} class="full-screen-container">
 		<div class="signup-login-container">
 			<button on:click={() => ($shouldSignupLoginAppear = false)} class="close-btn">
 				<img src={closeIcon} alt="close" />
