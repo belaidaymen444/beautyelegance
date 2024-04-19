@@ -75,32 +75,6 @@
 </footer>
 
 <style>
-	footer {
-		margin-top: 2rem;
-	}
-
-	.footer-title {
-		font-family: 'Abril Fatface';
-		font-weight: lighter;
-		text-align: center;
-	}
-	footer .container {
-		display: flex;
-		margin-top: 5rem;
-		align-items: start;
-		justify-content: space-evenly;
-		gap: 4rem;
-		flex-wrap: wrap;
-		padding-inline: 3rem;
-	}
-	.copyright-container {
-		margin-top: 8rem;
-		min-height: 5rem;
-		background: #f0d9d9;
-		display: grid;
-		place-content: center;
-	}
-
 	main {
 		border: 0.2rem solid rgb(243, 243, 243);
 		border-right: none;
@@ -149,5 +123,31 @@
 		z-index: 9;
 		width: 100%;
 		box-shadow: 0 0 3rem #0002;
+	}
+
+	footer {
+		margin-top: 2rem;
+	}
+
+	.footer-title {
+		font-family: 'Abril Fatface';
+		font-weight: lighter;
+		text-align: center;
+	}
+	footer .container {
+		display: flex;
+		margin-top: 5rem;
+		align-items: start;
+		justify-content: space-evenly;
+		gap: 4rem;
+		flex-wrap: wrap;
+		padding-inline: 3rem;
+	}
+	.copyright-container {
+		margin-top: 8rem;
+		min-height: 5rem;
+		background: #f0d9d9;
+		display: grid;
+		place-content: center;
 	}
 </style>
