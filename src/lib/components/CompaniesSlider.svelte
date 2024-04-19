@@ -57,6 +57,7 @@
 		height: 70vw;
 		max-height: 65rem;
 		position: relative;
+		top: 16rem;
 	}
 
 	.imgs-container {

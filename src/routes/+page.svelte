@@ -81,6 +81,12 @@
 		padding-bottom: 4rem;
 	}
 
+	main,
+	footer {
+		position: relative;
+		top: 16rem;
+	}
+
 	main > h3:first-child {
 		text-align: center;
 		font-weight: lighter;
