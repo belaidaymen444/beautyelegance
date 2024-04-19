@@ -44,4 +44,12 @@
 			gap: 3rem 1rem;
 		}
 	}
+
+	@media (max-width: 365px) {
+		.products-grid {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+	}
 </style>
