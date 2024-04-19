@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { shouldSignupLoginAppear } from '$lib/stores/signup_login_visibility_store';
+
 	let selectedTab: 'connexion' | 'inscription' = 'inscription';
 
 	function goToConnexionForm() {
@@ -10,74 +12,77 @@
 	}
 </script>
 
-<div class="full-screen-container">
-	<div class="signup-login-container">
-		{#if selectedTab === 'connexion'}
-			<h2>Connexion</h2>
+{#if $shouldSignupLoginAppear}
+	<div class="full-screen-container">
+		<div class="signup-login-container">
+			{#if selectedTab === 'connexion'}
+				<h2>Connexion</h2>
 
-			<div class="signup-login-pages-btns-container">
-				<button class="login-page-btn selected-tab" on:click={goToConnexionForm}>connexion</button>
-				<button class="signup-page-btn" on:click={goToInscriptionForm}>inscription</button>
-			</div>
-
-			<form>
-				<label>
-					<span>Adresse e-mail</span>
-					<br />
-					<input type="email" name="email" required />
-				</label>
-
-				<label>
-					<span>Mot de passe</span>
-					<br />
-					<input type="password" name="password" required />
-					<a href="/" class="forget-password-link">Mot de passe oublié?</a>
-				</label>
-
-				<div class="login-btn-and-signup-question-container">
-					<button class="login-btn">Connexion</button>
-					<p class="signup-question">
-						Vous n'avez pas un compte?
-						<a href="/">inscrivez-vous</a>
-					</p>
+				<div class="signup-login-pages-btns-container">
+					<button class="login-page-btn selected-tab" on:click={goToConnexionForm}>connexion</button
+					>
+					<button class="signup-page-btn" on:click={goToInscriptionForm}>inscription</button>
 				</div>
-			</form>
-		{:else}
-			<h2>Inscription</h2>
 
-			<div class="signup-login-pages-btns-container">
-				<button class="login-page-btn" on:click={goToConnexionForm}>connexion</button>
-				<button class="signup-page-btn selected-tab" on:click={goToInscriptionForm}
-					>inscription</button
-				>
-			</div>
+				<form>
+					<label>
+						<span>Adresse e-mail</span>
+						<br />
+						<input type="email" name="email" required />
+					</label>
 
-			<form>
-				<label>
-					<span>Nom d'utilisateur</span>
-					<br />
-					<input type="text" name="username" required />
-				</label>
+					<label>
+						<span>Mot de passe</span>
+						<br />
+						<input type="password" name="password" required />
+						<a href="/" class="forget-password-link">Mot de passe oublié?</a>
+					</label>
 
-				<label>
-					<span>Adresse e-mail</span>
-					<br />
-					<input type="email" name="email" required />
-				</label>
+					<div class="login-btn-and-signup-question-container">
+						<button class="login-btn">Connexion</button>
+						<p class="signup-question">
+							Vous n'avez pas un compte?
+							<a href="/">inscrivez-vous</a>
+						</p>
+					</div>
+				</form>
+			{:else}
+				<h2>Inscription</h2>
 
-				<label>
-					<span>Mot de passe</span>
-					<br />
-					<input type="password" name="password" required />
-				</label>
-
-				<div class="signup-btn-and-signup-question-container">
-					<button class="signup-btn">Inscription</button>
+				<div class="signup-login-pages-btns-container">
+					<button class="login-page-btn" on:click={goToConnexionForm}>connexion</button>
+					<button class="signup-page-btn selected-tab" on:click={goToInscriptionForm}
+						>inscription</button
+					>
 				</div>
-			</form>
-		{/if}
+
+				<form>
+					<label>
+						<span>Nom d'utilisateur</span>
+						<br />
+						<input type="text" name="username" required />
+					</label>
+
+					<label>
+						<span>Adresse e-mail</span>
+						<br />
+						<input type="email" name="email" required />
+					</label>
+
+					<label>
+						<span>Mot de passe</span>
+						<br />
+						<input type="password" name="password" required />
+					</label>
+
+					<div class="signup-btn-and-signup-question-container">
+						<button class="signup-btn">Inscription</button>
+					</div>
+				</form>
+			{/if}
+		</div>
 	</div>
-</div>
+{/if}
 
 <style>
 	.full-screen-container {
