@@ -56,4 +56,10 @@
 	.features-container img {
 		width: 10rem;
 	}
+
+	@media (max-width: 365px) {
+		li {
+			flex-direction: column;
+		}
+	}
 </style>

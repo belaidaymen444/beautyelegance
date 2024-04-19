@@ -99,4 +99,18 @@
 			width: 30rem;
 		}
 	}
+
+	@media (max-width: 365px) {
+		.info-text h1 {
+			font-size: 15vw;
+		}
+
+		img[alt='logo'] {
+			width: 10rem;
+		}
+
+		.info-text ul:first-of-type {
+			width: 80%;
+		}
+	}
 </style>

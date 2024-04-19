@@ -154,4 +154,10 @@
 		display: grid;
 		place-content: center;
 	}
+
+	@media (max-width: 365px) {
+		.copyright-container {
+			font-size: 1.3rem;
+		}
+	}
 </style>
