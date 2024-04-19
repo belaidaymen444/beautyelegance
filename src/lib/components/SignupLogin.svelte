@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { shouldSignupLoginAppear } from '$lib/stores/signup_login_visibility_store';
+	import closeIcon from '$lib/assets/icons/close.png';
 
 	let selectedTab: 'connexion' | 'inscription' = 'inscription';
 
@@ -15,6 +16,9 @@
 {#if $shouldSignupLoginAppear}
 	<div class="full-screen-container">
 		<div class="signup-login-container">
+			<button on:click={() => ($shouldSignupLoginAppear = false)} class="close-btn">
+				<img src={closeIcon} alt="close" />
+			</button>
 			{#if selectedTab === 'connexion'}
 				<h2>Connexion</h2>
 
@@ -106,7 +110,22 @@
 		flex-direction: column;
 		align-items: center;
 		border-radius: 1rem;
+		position: relative;
 	}
+
+	.close-btn {
+		position: absolute;
+		right: 3rem;
+		top: 2rem;
+		background: none;
+		border: none;
+		cursor: pointer;
+		z-index: 9;
+	}
+	.close-btn img {
+		width: 2.6rem;
+	}
+
 	.signup-login-container h2 {
 		text-transform: capitalize;
 	}
