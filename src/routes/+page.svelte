@@ -75,6 +75,10 @@
 </footer>
 
 <style>
+	footer {
+		margin-top: 2rem;
+	}
+
 	.footer-title {
 		font-family: 'Abril Fatface';
 		font-weight: lighter;
