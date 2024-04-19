@@ -4,6 +4,7 @@
 	import photo4 from '$lib/assets/Sample Imgs/Top Slider Imgs/photo_4.jpg';
 	import LeftArrow from './LeftArrow.svelte';
 	import RightArrow from './RightArrow.svelte';
+	import ScrollDownArrow from './ScrollDownArrow.svelte';
 
 	const photos = [photo1, photo2, photo4];
 	let i = 0;
@@ -47,6 +48,8 @@
 			></button>
 		{/each}
 	</div>
+
+	<ScrollDownArrow />
 </div>
 
 <style>
