@@ -1,6 +1,8 @@
 <script lang="ts">
 	import { shouldSignupLoginAppear } from '$lib/stores/signup_login_visibility_store';
 	import closeIcon from '$lib/assets/icons/close.png';
+	import ConnexionForm from './ConnexionForm.svelte';
+	import InscriptionForm from './InscriptionForm.svelte';
 
 	let selectedTab: 'connexion' | 'inscription' = 'inscription';
 
@@ -28,28 +30,7 @@
 					<button class="signup-page-btn" on:click={goToInscriptionForm}>inscription</button>
 				</div>
 
-				<form>
-					<label>
-						<span>Adresse e-mail</span>
-						<br />
-						<input type="email" name="email" required />
-					</label>
-
-					<label>
-						<span>Mot de passe</span>
-						<br />
-						<input type="password" name="password" required />
-						<a href="/" class="forget-password-link">Mot de passe oublié?</a>
-					</label>
-
-					<div class="login-btn-and-signup-question-container">
-						<button class="login-btn">Connexion</button>
-						<p class="signup-question">
-							Vous n'avez pas un compte?
-							<a href="/">inscrivez-vous</a>
-						</p>
-					</div>
-				</form>
+				<ConnexionForm />
 			{:else}
 				<h2>Inscription</h2>
 
@@ -60,29 +41,7 @@
 					>
 				</div>
 
-				<form>
-					<label>
-						<span>Nom d'utilisateur</span>
-						<br />
-						<input type="text" name="username" required />
-					</label>
-
-					<label>
-						<span>Adresse e-mail</span>
-						<br />
-						<input type="email" name="email" required />
-					</label>
-
-					<label>
-						<span>Mot de passe</span>
-						<br />
-						<input type="password" name="password" required />
-					</label>
-
-					<div class="signup-btn-and-signup-question-container">
-						<button class="signup-btn">Inscription</button>
-					</div>
-				</form>
+				<InscriptionForm />
 			{/if}
 		</div>
 	</div>
@@ -136,9 +95,7 @@
 		margin-top: 2em;
 		border-radius: 3rem;
 	}
-	.signup-login-pages-btns-container button,
-	.login-btn,
-	.signup-btn {
+	.signup-login-pages-btns-container button {
 		border: none;
 		font-size: 1.7rem;
 		padding: 0.6em 2em;
@@ -155,78 +112,5 @@
 	}
 	.signup-login-pages-btns-container .selected-tab {
 		background: #f1dada;
-	}
-
-	form {
-		margin-top: 6rem;
-		text-wrap: nowrap;
-		width: 80%;
-	}
-	form label {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		width: 100%;
-	}
-	form label span {
-		margin-bottom: -1em;
-		margin-left: 0.2em;
-	}
-	form label:first-of-type {
-		margin-bottom: 2em;
-	}
-	form label:not(:first-of-type, :last-of-type) {
-		margin-bottom: 2em;
-	}
-	form label:last-of-type {
-		margin-bottom: 0.2em;
-	}
-	form input {
-		font-size: 1.5rem;
-		padding: 0.3em 0.5em;
-	}
-	form .forget-password-link {
-		font-size: 1.4rem;
-		display: block;
-		margin-bottom: 3em;
-		margin-left: 0.2em;
-		color: #8d5a5a;
-		margin-top: 0.3em;
-	}
-	form .login-btn-and-signup-question-container {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		gap: 1rem;
-	}
-	form .login-btn,
-	form .signup-btn {
-		background: #f1dada;
-		border: none;
-		font-size: 1.9rem;
-		padding-inline: 2em;
-		text-transform: capitalize;
-		cursor: pointer;
-		outline: 0.1rem solid transparent;
-		transition: 0.2s;
-	}
-	form .signup-btn {
-		display: block;
-		margin: auto;
-		margin-top: 3em;
-	}
-	form .login-btn:hover,
-	form .signup-btn:hover {
-		background: #fff;
-		color: #e6a3a3;
-		outline-color: #e6a3a3;
-	}
-	form .signup-question {
-		margin: auto;
-		display: block;
-		font-size: 1.4rem;
-	}
-	form .signup-question a {
-		color: #923232;
 	}
 </style>
