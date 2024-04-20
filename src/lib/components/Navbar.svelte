@@ -16,7 +16,7 @@
 </script>
 
 <MediaQuery query="(max-width: 950px)" let:matches>
-	<nav bind:this={navbar} class:hidden-nav={matches && !$shouldVerticalNavbarAppear}>
+	<nav bind:this={navbar} class:visible-vertical-nav={matches && $shouldVerticalNavbarAppear}>
 		{#if matches}
 			<button class="close-btn" on:click={() => ($shouldVerticalNavbarAppear = false)}>
 				<img src={closeIcon} alt="close" class="close-icon" />
@@ -82,14 +82,15 @@
 			background: #fff;
 			z-index: 999;
 			overflow-y: scroll;
-			transition: transform 0.4s;
+			transform: translateX(-100%);
 		}
 		nav::-webkit-scrollbar {
 			display: none;
 		}
 
-		.hidden-nav {
-			transform: translateX(-100%);
+		.visible-vertical-nav {
+			transform: translateX(0%);
+			transition: transform 0.4s;
 		}
 
 		.close-btn {
