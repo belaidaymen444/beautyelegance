@@ -7,7 +7,7 @@
 	const categoryProducts = $products[productsCategory.toLowerCase()];
 </script>
 
-<h2 class="products-category-title">{productsCategory}</h2>
+<h2 id={productsCategory.toLowerCase()} class="products-category-title">{productsCategory}</h2>
 <div class="products-grid">
 	{#each categoryProducts as product (product.name)}
 		<Product {product} />
