@@ -18,7 +18,17 @@
 <MediaQuery query="(max-width: 950px)" let:matches>
 	<nav bind:this={navbar} class:visible-vertical-nav={matches && $shouldVerticalNavbarAppear}>
 		{#if matches}
-			<button class="close-btn" on:click={() => ($shouldVerticalNavbarAppear = false)}>
+			<button
+				class="close-btn"
+				on:click={() => {
+					$shouldVerticalNavbarAppear = false;
+					navbar.style.transition = 'transform 0.4s';
+
+					setTimeout(() => {
+						navbar.style.transition = '';
+					}, 400);
+				}}
+			>
 				<img src={closeIcon} alt="close" class="close-icon" />
 			</button>
 			<div class="seperator"></div>
