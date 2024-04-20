@@ -95,4 +95,16 @@
 	.active-slide-bullet {
 		background: #fa9;
 	}
+
+	@media (max-width: 950px) {
+		.container {
+			top: 12rem;
+		}
+	}
+
+	@media (max-width: 589px) {
+		.container {
+			top: 18rem;
+		}
+	}
 </style>
