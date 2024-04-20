@@ -8,8 +8,12 @@
 
 	const photos = [photo2, photo1, photo4];
 	let i = 0;
+	let autoSlide = setInterval(moveToRight, 3000);
 
 	function moveToRight() {
+		clearInterval(autoSlide);
+		autoSlide = setInterval(moveToRight, 3000);
+
 		if (-i !== photos.length - 1) {
 			i--;
 
@@ -20,6 +24,9 @@
 	}
 
 	function moveToLeft() {
+		clearInterval(autoSlide);
+		autoSlide = setInterval(moveToRight, 3000);
+
 		if (i !== 0) {
 			i++;
 
@@ -28,8 +35,6 @@
 
 		i = -(photos.length - 1);
 	}
-
-	setInterval(moveToRight, 3000);
 </script>
 
 <div class="container">
