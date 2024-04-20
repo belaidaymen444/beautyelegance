@@ -86,4 +86,12 @@
 	.signup-login-container h2 {
 		text-transform: capitalize;
 	}
+
+	@media (orientation: landscape) {
+		.signup-login-container {
+			height: 30%;
+			overflow-y: scroll;
+			border-radius: 0;
+		}
+	}
 </style>
