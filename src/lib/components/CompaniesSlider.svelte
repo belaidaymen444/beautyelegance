@@ -6,7 +6,7 @@
 	import RightArrow from './RightArrow.svelte';
 	import ScrollDownArrow from './ScrollDownArrow.svelte';
 
-	const photos = [photo1, photo2, photo4];
+	const photos = [photo2, photo1, photo4];
 	let i = 0;
 
 	function moveToRight() {
