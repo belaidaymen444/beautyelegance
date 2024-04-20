@@ -28,6 +28,8 @@
 
 		i = -(photos.length - 1);
 	}
+
+	setInterval(moveToRight, 3000);
 </script>
 
 <div class="container">
