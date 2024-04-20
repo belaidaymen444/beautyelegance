@@ -26,7 +26,20 @@
 		<ul>
 			{#each navLinksTexts as linkText (linkText)}
 				<li>
-					<button class="nav-link">{linkText}</button>
+					<button
+						class="nav-link"
+						on:click={() => {
+							if (navLinksTexts.slice(3).includes(linkText)) {
+								document.querySelector('.voir-plus-btn')?.dispatchEvent(new MouseEvent('click'));
+							}
+
+							scrollBy({
+								top:
+									// @ts-ignore
+									document.getElementById(linkText.toLowerCase())?.getBoundingClientRect().top - 180
+							});
+						}}>{linkText}</button
+					>
 				</li>
 			{/each}
 		</ul>
