@@ -6,10 +6,9 @@
 	const navLinksTexts = [
 		'PROMOTION',
 		'MAQUILLAGE',
-		'CORPS & BAIN',
 		'CHEVEUX',
-		'PARFUMS',
-		'SOINS',
+		'VISAGE',
+		'CORPS & BAIN',
 		'DEO & STICK'
 	];
 
