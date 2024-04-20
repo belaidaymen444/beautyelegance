@@ -25,7 +25,9 @@
 		{/if}
 		<ul>
 			{#each navLinksTexts as linkText (linkText)}
-				<li><a href="/">{linkText}</a></li>
+				<li>
+					<button class="nav-link">{linkText}</button>
+				</li>
 			{/each}
 		</ul>
 	</nav>
@@ -43,14 +45,17 @@
 		list-style-type: none;
 	}
 
-	li a {
+	li .nav-link {
 		color: #000;
 		text-decoration: none;
 		font-size: 2rem;
 		transition: 0.2s color;
+		background: none;
+		border: none;
+		cursor: pointer;
 	}
 
-	li a:hover {
+	li .nav-link:hover {
 		color: #d1b2b2;
 	}
 
@@ -112,7 +117,7 @@
 			position: relative;
 		}
 
-		li a {
+		li .nav-link {
 			font-size: 2.4rem;
 		}
 
