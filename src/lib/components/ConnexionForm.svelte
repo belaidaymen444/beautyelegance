@@ -88,6 +88,8 @@
 		margin: auto;
 		display: block;
 		font-size: 1.4rem;
+		text-wrap: wrap;
+		text-align: center;
 	}
 	.signup-question a {
 		color: #923232;

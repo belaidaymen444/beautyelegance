@@ -50,23 +50,24 @@
 		top: 0;
 		left: 0;
 		width: 100%;
-		min-height: 100svh;
+		min-height: 100lvh;
 		background: #000c;
 		z-index: 9999;
-		display: grid;
-		place-content: center;
 	}
 
 	.signup-login-container {
 		padding: 2em 0;
 		background: #fff;
-		width: 40rem;
+		width: min(40rem, 100%);
 		min-height: 50rem;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		border-radius: 1rem;
-		position: relative;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
 	}
 
 	.close-btn {

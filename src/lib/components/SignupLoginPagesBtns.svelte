@@ -43,4 +43,17 @@
 	.signup-login-pages-btns-container .selected-tab {
 		background: #f1dada;
 	}
+
+	@media (max-width: 320px) {
+		.signup-login-pages-btns-container {
+			flex-direction: column;
+			gap: 0.8rem;
+			width: 70%;
+		}
+
+		.signup-login-pages-btns-container .login-page-btn,
+		.signup-login-pages-btns-container .signup-page-btn {
+			border-radius: 3rem;
+		}
+	}
 </style>
