@@ -3,7 +3,6 @@
 	import Navbar from '$lib/components/Navbar.svelte';
 	import CompaniesSlider from '$lib/components/CompaniesSlider.svelte';
 	import ProductsGrid from '$lib/components/ProductsGrid.svelte';
-	import '../app.css';
 	import FeaturesContainer from '$lib/components/FeaturesContainer.svelte';
 	import InfoContainer from '$lib/components/InfoContainer.svelte';
 	import Cart from '$lib/components/Cart.svelte';
