@@ -6,7 +6,6 @@
 	import MediaQuery from 'svelte-media-queries';
 	import { shouldVerticalNavbarAppear } from '$lib/stores/navbar_visibility_store';
 	import { shouldCartSidebarAppear } from '$lib/stores/cart_visibility_store';
-	import { shouldSignupLoginAppear } from '$lib/stores/signup_login_visibility_store';
 </script>
 
 <MediaQuery query="(max-width: 950px)" let:matches>
@@ -37,9 +36,7 @@
 					{/if}
 				</MediaQuery>
 				<div class="right-icons-container icons-container">
-					<button on:click={() => ($shouldSignupLoginAppear = true)} class="login-btn"
-						><img src={loginIcon} alt="login" /></button
-					>
+					<a href="/login" class="login-btn"><img src={loginIcon} alt="login" /></a>
 					<button on:click={() => ($shouldCartSidebarAppear = true)} class="shopping-cart-btn"
 						><img src={cartIcon} alt="shopping-cart" /></button
 					>
@@ -49,9 +46,7 @@
 			<img src={logo} alt="logo" class="logo" />
 			<h1>Beaute & Elegance</h1>
 			<div class="icons-container">
-				<button on:click={() => ($shouldSignupLoginAppear = true)} class="login-btn"
-					><img src={loginIcon} alt="login" /></button
-				>
+				<a href="/login" class="login-btn"><img src={loginIcon} alt="login" /></a>
 				<button class="search-btn"> <img src={searchIcon} alt="search" /></button>
 				<button on:click={() => ($shouldCartSidebarAppear = true)} class="shopping-cart-btn">
 					<img src={cartIcon} alt="shopping-cart" /></button
