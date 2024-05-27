@@ -8,7 +8,6 @@
 	import FeaturesContainer from '$lib/components/FeaturesContainer.svelte';
 	import InfoContainer from '$lib/components/InfoContainer.svelte';
 	import Cart from '$lib/components/Cart.svelte';
-	import SignupLogin from '$lib/components/SignupLogin.svelte';
 
 	let hiddenContentContainer: HTMLDivElement;
 	let voirPlusBtn: HTMLButtonElement;
@@ -29,8 +28,6 @@
 	<link rel="shortcut icon" href={logo} type="image/x-icon" />
 	<title>Beaute & Elegance</title>
 </svelte:head>
-
-<SignupLogin />
 
 <header>
 	<div class="fixed">
