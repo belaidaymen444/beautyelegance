@@ -163,7 +163,7 @@
 		margin-top: 4rem;
 	}
 	.password-input-container {
-		margin-top: 3rem;
+		margin-top: 2rem;
 	}
 	.forgot-password-link {
 		margin-left: 0.8rem;
@@ -180,7 +180,7 @@
 		background: #f1dada;
 		width: 85%;
 		height: 6rem;
-		margin-top: 7rem;
+		margin-top: 4rem;
 		display: grid;
 		place-content: center;
 		border-radius: 100000000rem;
