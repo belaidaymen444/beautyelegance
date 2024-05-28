@@ -88,6 +88,8 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		position: relative;
+		top: -7rem;
 	}
 
 	h1 {
