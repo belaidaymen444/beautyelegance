@@ -39,6 +39,9 @@
 			</div>
 
 			<button class="connexion-btn">Connexion</button>
+			<span class="signup-question">
+				Vous n'avez pas de compte ? <a href="/" class="signup-link">Inscrivez-vous</a>
+			</span>
 		</form>
 	</div>
 </div>
@@ -49,6 +52,9 @@
 		height: 100%;
 		display: grid;
 		grid-template-columns: 45rem auto;
+
+		--links-color: #9c5555;
+		--hov-links-color: #532e2e;
 	}
 
 	.sidebar-img-and-logo-container {
@@ -161,12 +167,12 @@
 	}
 	.forgot-password-link {
 		margin-left: 0.8rem;
-		color: #9c5555;
+		color: var(--links-color);
 		position: relative;
 		top: -0.5rem;
 	}
 	.forgot-password-link:hover {
-		color: #532e2e;
+		color: var(--hov-links-color);
 	}
 
 	.connexion-btn {
@@ -192,5 +198,15 @@
 	}
 	.connexion-btn:active {
 		transform: scale(0.95);
+	}
+
+	.signup-question {
+		margin-top: 0.5rem;
+	}
+	.signup-link {
+		color: var(--links-color);
+	}
+	.signup-link:hover {
+		color: var(--hov-links-color);
 	}
 </style>
