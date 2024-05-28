@@ -35,6 +35,7 @@
 			<div class="password-input-container input-container">
 				<label for="password">Mot de passe</label>
 				<input type="password" id="password" required />
+				<a href="/" class="forgot-password-link">Mot de passe oublié?</a>
 			</div>
 
 			<button class="connexion-btn">Connexion</button>
@@ -157,6 +158,15 @@
 	}
 	.password-input-container {
 		margin-top: 3rem;
+	}
+	.forgot-password-link {
+		margin-left: 0.8rem;
+		color: #9c5555;
+		position: relative;
+		top: -0.5rem;
+	}
+	.forgot-password-link:hover {
+		color: #532e2e;
 	}
 
 	.connexion-btn {
