@@ -83,7 +83,7 @@
 	}
 
 	form {
-		min-width: 50rem;
+		width: min(50rem, 100vw);
 		min-height: 10rem;
 		display: flex;
 		flex-direction: column;
@@ -122,7 +122,7 @@
 	.divider {
 		margin-top: 4rem;
 		margin-bottom: 2.8rem;
-		width: calc(100% + 3rem);
+		width: min(100%, 90vw);
 		background: pink;
 		position: relative;
 	}
@@ -140,6 +140,7 @@
 		transform: translate(-50%, -50%);
 		letter-spacing: 0.1rem;
 		font-size: 1.5rem;
+		text-wrap: nowrap;
 	}
 
 	.input-container {
@@ -210,5 +211,23 @@
 	}
 	.signup-link:hover {
 		color: var(--hov-links-color);
+	}
+
+	@media (max-width: 1000px) {
+		.container {
+			display: block;
+		}
+
+		.sidebar-img-and-logo-container {
+			display: none;
+		}
+
+		.form-container {
+			width: 100%;
+			height: 100%;
+		}
+		form {
+			top: 0;
+		}
 	}
 </style>
