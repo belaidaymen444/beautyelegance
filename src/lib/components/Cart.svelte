@@ -22,6 +22,9 @@
 			{#each $cart as product (product.name)}
 				<CartProduct {product} />
 			{/each}
+
+			<a class="enter-cart-btn" href="/panier">Entre Panier</a>
+			<a class="command-btn" href="/">Commander maintenant</a>
 		{/if}
 	</div>
 </div>
@@ -89,6 +92,7 @@
 		position: relative;
 		display: flex;
 		flex-direction: column;
+		align-items: center;
 		padding: 1rem;
 		gap: 2rem;
 	}
@@ -99,5 +103,36 @@
 		left: 50%;
 		transform: translate(-50%, -50%);
 		font-size: 2rem;
+	}
+
+	.cart__products-container a {
+		text-decoration: none;
+		width: 85%;
+		text-align: center;
+		margin-top: 1rem;
+	}
+	.command-btn {
+		background-color: #c6b0b0;
+		color: var(--text-color);
+		padding-block: 2rem;
+		border-radius: 50px;
+		transition: all 0.2s;
+		font-weight: 600;
+	}
+	.command-btn:hover {
+		background-color: #b95959;
+		color: white;
+	}
+	.enter-cart-btn {
+		border: 2px solid #c6b0b0;
+		padding-block: 2rem;
+		border-radius: 50px;
+		color: #c6b0b0;
+		font-weight: 600;
+		transition: all 0.2s;
+	}
+	.enter-cart-btn:hover {
+		border: 2px solid #eec8c8;
+		color: #eec8c8;
 	}
 </style>

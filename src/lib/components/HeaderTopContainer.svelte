@@ -1,15 +1,17 @@
 <script lang="ts">
-	import logo from '$lib/assets/logo.png';
+	import logo from '$lib/assets/logo-uncolored.png';
 	import loginIcon from '$lib/assets/icons/add-user.png';
 	import searchIcon from '$lib/assets/icons/search.png';
 	import cartIcon from '$lib/assets/icons/shopping-cart.png';
 	import MediaQuery from 'svelte-media-queries';
 	import { shouldVerticalNavbarAppear } from '$lib/stores/navbar_visibility_store';
 	import { shouldCartSidebarAppear } from '$lib/stores/cart_visibility_store';
+
+	export let brownBackground = false;
 </script>
 
 <MediaQuery query="(max-width: 950px)" let:matches>
-	<div class="container">
+	<div class="container" class:brown-container={brownBackground}>
 		{#if matches}
 			<MediaQuery query="(min-width: 590px) and (max-width: 950px)" let:matches>
 				{#if !matches}
@@ -64,6 +66,9 @@
 		padding-inline: 4rem;
 		height: 10rem;
 		background: #f0d9d9;
+	}
+	.brown-container {
+		background-color: hsla(0, 41%, 54%, 0.45);
 	}
 
 	h1 {
