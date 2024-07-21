@@ -44,7 +44,8 @@
 			<div class="resposive-side">
 				<table class="table-phone">
 					{#each $cart as product (product.name)}
-					<ResposiveSideCart product/>
+
+					<ResposiveSideCart {product} />
 			{/each}
 
 					

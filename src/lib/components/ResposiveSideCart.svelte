@@ -21,7 +21,7 @@
             <button class="delet-Button"
                 ><img src={deletIcon} width="13" alt="deletIcon" /></button
             >
-            <h1>GRACIAS Shampoing</h1>
+            <h1>{product.name}</h1>
         </div>
     </td>
     <td> <img src={product.imgUrl} alt="" width="300" /> </td>
