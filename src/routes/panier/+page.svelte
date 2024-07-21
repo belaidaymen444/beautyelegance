@@ -1,8 +1,8 @@
 <script lang="ts">
 	import HeaderTopContainer from '$lib/components/HeaderTopContainer.svelte';
 	import productImage from '$lib/assets/Sample Imgs/Products Imgs/photo_19.jpg';
-	import ProductForCartPage from '$lib/components/ProductForCartPage.svelte';
-	import ResposiveSideCart from '$lib/components/ResposiveSideCart.svelte';
+	import ProductForCartPage from '$lib/components/CartPage/ProductForCartPage.svelte';
+	import ResposiveSideCart from '$lib/components/CartPage/ResposiveSideCart.svelte';
 	
 	import { cart } from "$lib/stores/cart_store";
 </script>

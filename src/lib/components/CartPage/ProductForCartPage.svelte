@@ -25,12 +25,12 @@
             <td class="Prix">{new Intl.NumberFormat('en-US', { minimumFractionDigits: 2 }).format(product.price)} DZD</td>
             <td>
                 <div class="Qte-general-input">
-                    <input class="leftbt" type="button" value="+" />
-                    <input class="QTE" type="number" value="1" />
-                    <input class="rightbt" type="button" value="-" />
+                    <input class="leftbt" type="button" value="+" on:click={ () => cart.add(product) }/>
+                    <input class="QTE" type="number"  value = {product.quantity} />
+                    <input class="rightbt" type="button" value="-" on:click={ () => cart.remove(product,false)} />
                 </div>
             </td>
-            <td class="total-Price-X-QTE">900.00 DZD</td>
+            <td class="total-Price-X-QTE">{new Intl.NumberFormat('en-US', { minimumFractionDigits: 2 }).format(product.price * product.quantity )} DZD</td>
         </tr>
     
    
