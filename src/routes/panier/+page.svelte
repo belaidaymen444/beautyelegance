@@ -24,7 +24,6 @@
 						<th></th>
 						<th></th>
 						<th></th>
-
 						<th>PRIX</th>
 						<th>QUANTITE</th>
 						<th>sous-TOTAL</th>
