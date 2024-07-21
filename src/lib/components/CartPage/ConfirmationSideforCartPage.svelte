@@ -1,6 +1,9 @@
 
 <script lang="ts">
+import { cart } from "$lib/stores/cart_store";
 
+ export let product: CartProductProps;
+ 
 </script>
 
 
@@ -17,7 +20,7 @@
 
     <div>
         <h1>Sous-total</h1>
-        <span>450.00DZD</span>
+        <span> </span>
     </div>
     <hr />
     <div>
@@ -35,10 +38,10 @@
     <div class="bottom-Confirmation-side">
         <div>
             <h1>Total</h1>
-            <span class="total-price-confirmation">900.00DZD</span>
+            <span class="total-price-confirmation" >{new Intl.NumberFormat('en-US', { minimumFractionDigits: 2 }).format(product.price * product.quantity )} DZD</span>
         </div>
 
-        <button class="validation">VALIDER LA COMMANDE</button>
+        <button class="validation"   >VALIDER LA COMMANDE</button>
     </div>
 </div>
 
@@ -105,6 +108,23 @@
 		font-weight: 700;
 		-webkit-text-stroke: rgb(77, 77, 77) 0.1px;
 	}
+    hr {
+		border: solid 1px rgba(128, 128, 128, 0.185);
+	}
+    @media (min-width: 660px) and (max-width: 1050px) {
+
+        .confirmation-side {
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+		}
+		.confirmation-side .validation {
+			margin-top: 0rem;
+		}
+		.bottom-Confirmation-side {
+			margin-top: 2rem;
+		}
+}
     @media (max-width: 660px) {
         .confirmation-side {
 			width: 100%;

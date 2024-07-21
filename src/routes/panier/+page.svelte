@@ -4,7 +4,7 @@
 	import ProductForCartPage from '$lib/components/CartPage/ProductForCartPage.svelte';
 	import ResposiveSideCart from '$lib/components/CartPage/ResposiveSideCart.svelte';
 	import ConfirmationSideforCartPage from '$lib/components/CartPage/ConfirmationSideforCartPage.svelte';
-	import { cart } from "$lib/stores/cart_store";
+	import { cart } from '$lib/stores/cart_store';
 </script>
 
 <svelte:head>
@@ -33,28 +33,20 @@
 					</tr>
 				</thead>
 				<tbody class="add-many-products">
-					
-			{#each $cart as product (product.name)}
-			<ProductForCartPage {product} />
-			{/each}
-
-					
+					{#each $cart as product (product.name)}
+						<ProductForCartPage {product} />
+					{/each}
 				</tbody>
 			</table>
 			<div class="resposive-side">
 				<table class="table-phone">
 					{#each $cart as product (product.name)}
-
-					<ResposiveSideCart {product} />
-			{/each}
-
-					
-
-
+						<ResposiveSideCart {product} />
+					{/each}
 				</table>
 			</div>
 
-			<ConfirmationSideforCartPage/>
+			<ConfirmationSideforCartPage {product} />
 		</div>
 	</div>
 </main>
@@ -84,7 +76,6 @@
 		gap: 2rem;
 		margin: 2rem;
 	}
-
 
 	.titles {
 		display: flex;

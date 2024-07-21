@@ -133,6 +133,7 @@
 		font-weight: 800;
 		-webkit-text-stroke: rgb(77, 77, 77) 0.1px;
 	}
+
     @media (max-width: 700px) {
 		
 		.details {
