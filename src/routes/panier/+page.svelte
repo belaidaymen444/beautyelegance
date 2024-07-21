@@ -1,8 +1,10 @@
 <script lang="ts">
 	import HeaderTopContainer from '$lib/components/HeaderTopContainer.svelte';
-	import deletIcon from '$lib/assets/icons/deletcartproduct.svg';
 	import productImage from '$lib/assets/Sample Imgs/Products Imgs/photo_19.jpg';
 	import ProductForCartPage from '$lib/components/ProductForCartPage.svelte';
+	import ResposiveSideCart from '$lib/components/ResposiveSideCart.svelte';
+	
+	import { cart } from "$lib/stores/cart_store";
 </script>
 
 <svelte:head>
@@ -32,10 +34,21 @@
 				</thead>
 				<tbody class="add-many-products">
 					
+			{#each $cart as product (product.name)}
+			<ProductForCartPage {product} />
+			{/each}
+
+					
 				</tbody>
 			</table>
 			<div class="resposive-side">
 				<table class="table-phone">
+					{#each $cart as product (product.name)}
+					<ResposiveSideCart product/>
+			{/each}
+
+					
+
 
 				</table>
 			</div>
@@ -227,65 +240,7 @@
 		font-weight: 600;
 		width: 35%;
 	}
-	.Prix {
-		color: #777777;
-		display: flex;
-		justify-content: center;
-	}
-	.Qte-general-input {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		border-collapse: collapse;
 
-		overflow: hidden;
-		width: 12vh;
-		height: 7vh;
-
-		font-size: 2rem;
-	}
-	.Qte-general-input input[type='button'] {
-		display: flex;
-		border: 2px solid rgba(128, 128, 128, 0.349);
-		font-size: 1.7rem;
-		width: 40%;
-		outline: none;
-		height: 100%;
-		transition: 0.3s;
-		background-color: white;
-	}
-	.Qte-general-input input[type='number'] {
-		display: flex;
-		align-items: center;
-		text-align: center;
-		border: none;
-		width: 60%;
-		height: 100%;
-		outline: none;
-		border-block: 2px solid rgba(128, 128, 128, 0.349);
-		font-size: 1.7rem;
-	}
-	.Qte-general-input .rightbt {
-		border-top-right-radius: 50px;
-		border-bottom-right-radius: 50px;
-	}
-	.Qte-general-input .leftbt {
-		border-top-left-radius: 50px;
-		border-bottom-left-radius: 50px;
-	}
-
-	.Qte-general-input .leftbt:hover,
-	.Qte-general-input .rightbt:hover {
-		background: #b95959;
-		cursor: pointer;
-		border: 2px solid #b95959;
-	}
-
-	.total-Price-X-QTE {
-		color: hsla(0, 41%, 54%, 0.45);
-		font-weight: 800;
-		-webkit-text-stroke: rgb(77, 77, 77) 0.1px;
-	}
 	hr {
 		border: solid 1px rgba(128, 128, 128, 0.185);
 	}
