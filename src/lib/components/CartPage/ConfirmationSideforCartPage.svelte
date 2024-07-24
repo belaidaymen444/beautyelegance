@@ -1,37 +1,32 @@
 <script lang="ts">
-	import { cart } from "$lib/stores/cart_store";
-	import Product from "../Product.svelte";
-	import { products } from "$lib/stores/products_store";
-	import { onMount } from "svelte";
+	import { cart } from '$lib/stores/cart_store';
+	import Product from '../Product.svelte';
+	import { products } from '$lib/stores/products_store';
+	import { onMount } from 'svelte';
 
-     
-    function calculateproductPrices (): number{
+	function calculateproductPrices(): number {
 		let total = 0;
-		cart.subscribe((cart)=> {{
-			cart.forEach((product) => {
-				total += product.price 
-				})
-		}})
-		return total
+		cart.subscribe((cart) => {
+			{
+				cart.forEach((product) => {
+					total += product.price;
+				});
+			}
+		});
+		return total;
 	}
-	export const TotalPrice= calculateTotalPrice();
-	
-function calculateTotalPrice(): number {
-  let totalPrice = 0;
-  cart.subscribe((cart) => {
-    cart.forEach((product: CartProductProps) => {
-      totalPrice += product.price * product.quantity;
-    });
-});
+	export const TotalPrice = calculateTotalPrice();
 
-  return totalPrice;
-}
-    
-	
+	function calculateTotalPrice(): number {
+		let totalPrice = 0;
+		cart.subscribe((cart) => {
+			cart.forEach((product: CartProductProps) => {
+				totalPrice += product.price * product.quantity;
+			});
+		});
 
-
-   
-	 
+		return totalPrice;
+	}
 </script>
 
 <div class="confirmation-side">
@@ -39,8 +34,11 @@ function calculateTotalPrice(): number {
 
 	<div>
 		<h1>Sous-total</h1>
-		<span>{  new Intl.NumberFormat('en-IN', { maximumSignificantDigits: 3 }).format(
-    calculateproductPrices())} DZD</span>
+		<span
+			>{new Intl.NumberFormat('en-IN', { maximumSignificantDigits: 3 }).format(
+				calculateproductPrices()
+			)} DZD</span
+		>
 	</div>
 	<hr />
 	<div>
@@ -58,10 +56,11 @@ function calculateTotalPrice(): number {
 	<div class="bottom-Confirmation-side">
 		<div>
 			<h1>Total</h1>
-			<span class="total-price-confirmation"> {  new Intl.NumberFormat('en-IN', { maximumSignificantDigits: 3 }).format(
-   calculateTotalPrice())}  DZD   </span
-				
-			>
+			<span class="total-price-confirmation">
+				{new Intl.NumberFormat('en-IN', { maximumSignificantDigits: 3 }).format(
+					calculateTotalPrice()
+				)} DZD
+			</span>
 		</div>
 
 		<button class="validation">VALIDER LA COMMANDE</button>

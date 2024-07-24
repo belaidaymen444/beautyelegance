@@ -5,10 +5,7 @@
 	import ConfirmationSideforCartPage from '$lib/components/CartPage/ConfirmationSideforCartPage.svelte';
 	import { cart } from '$lib/stores/cart_store';
 	import { products } from '$lib/stores/products_store';
-	let isrunned = false
-	
-
-	
+	let isrunned = false;
 </script>
 
 <svelte:head>
@@ -38,23 +35,21 @@
 				</thead>
 				<tbody class="add-many-products">
 					{#each $cart as product (product.name)}
-					<ProductForCartPage {product} />
+						<ProductForCartPage {product} />
 					{/each}
 				</tbody>
-			</table>
-			<div class="resposive-side">
-				<table class="table-phone">
-					{#each $cart as product (product.name)}
-						<ResposiveSideCart {product} />
+				</table>
+				<div class="resposive-side">
+					<table class="table-phone">
+						{#each $cart as product (product.name)}
+							<ResposiveSideCart {product} />
 						{/each}
 					</table>
 				</div>
-			
-							<ConfirmationSideforCartPage />
-
+			<ConfirmationSideforCartPage />
+			</div>
 		</div>
-	</div>
-</main>
+	</main>
 
 <style>
 	nav {
