@@ -1,66 +1,54 @@
 <script lang="ts">
-    import { cart } from "$lib/stores/cart_store";
-    import deletIcon from '$lib/assets/icons/deletcartproduct.svg';
-    import { products } from '$lib/stores/products_store';
+	import { cart } from '$lib/stores/cart_store';
+	import deletIcon from '$lib/assets/icons/deletcartproduct.svg';
+	import { products } from '$lib/stores/products_store';
 	export let product: CartProductProps;
-	
-	
-	
-
-
 </script>
 
-
-
-
-    
-        <tr class="details">
-            <td
-                ><button class="delet-Button"
-                    ><img src={deletIcon} width="13" alt="deletIcon" /></button
-                ></td
-            >
-            <td><img src={product.imgUrl} alt="" width="100" /></td>
-            <td class="descraption">
-                {product.description}
-            </td>
-            <td class="Prix">{new Intl.NumberFormat('en-US', { minimumFractionDigits: 2 }).format(product.price)} DZD</td>
-            <td>
-                <div class="Qte-general-input">
-                    <input class="leftbt" type="button" value="+" on:click={ () => cart.add(product) }/>
-                    <input class="QTE" type="number"  value = {product.quantity} disabled/>
-                    <input class="rightbt" type="button" value="-" on:click={ () => cart.remove(product,false)} />
-                </div>
-            </td>
-            <td class="total-Price-X-QTE">{new Intl.NumberFormat('en-US', { minimumFractionDigits: 2 }).format(product.price * product.quantity )} DZD</td>
-        </tr>
-    
-   
-
-
-
+<tr class="details">
+	<td><button class="delet-Button"><img src={deletIcon} width="13" alt="deletIcon" /></button></td>
+	<td><img src={product.imgUrl} alt="" width="100" /></td>
+	<td class="descraption">
+		{product.description}
+	</td>
+	<td class="Prix"
+		>{new Intl.NumberFormat('en-US', { minimumFractionDigits: 2 }).format(product.price)} DZD</td
+	>
+	<td>
+		<div class="Qte-general-input">
+			<input class="leftbt" type="button" value="+" on:click={() => cart.add(product)} />
+			<input class="QTE" type="number" value={product.quantity} disabled />
+			<input class="rightbt" type="button" value="-" on:click={() => cart.remove(product, false)} />
+		</div>
+	</td>
+	<td class="total-Price-X-QTE"
+		>{new Intl.NumberFormat('en-US', { minimumFractionDigits: 2 }).format(
+			product.price * product.quantity
+		)} DZD</td
+	>
+</tr>
 
 <style>
-.details input[type='number']::-webkit-inner-spin-button,
+	.details input[type='number']::-webkit-inner-spin-button,
 	.details input[type='number']::-webkit-outer-spin-button {
 		-webkit-appearance: none;
 	}
-    .details {
+	.details {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		padding: 1rem;
 		border-bottom: 2px solid rgba(128, 128, 128, 0.185);
 	}
-    .details td {
+	.details td {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
 		margin-right: 2rem;
 	}
-    
-    .delet-Button {
+
+	.delet-Button {
 		display: flex;
 		justify-content: center;
 		background: none;
@@ -68,7 +56,7 @@
 		outline: none;
 		cursor: pointer;
 	}
-    .descraption {
+	.descraption {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
@@ -76,7 +64,7 @@
 		font-weight: 600;
 		width: 35%;
 	}
-    .Prix {
+	.Prix {
 		color: #777777;
 		display: flex;
 		justify-content: center;
@@ -136,11 +124,9 @@
 		-webkit-text-stroke: rgb(77, 77, 77) 0.1px;
 	}
 
-    @media (max-width: 700px) {
-		
+	@media (max-width: 700px) {
 		.details {
 			padding: 0;
 		}
 	}
-
 </style>

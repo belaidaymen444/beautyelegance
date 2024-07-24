@@ -4,23 +4,22 @@
 	import { products } from '$lib/stores/products_store';
 	import { onMount } from 'svelte';
 
-	function calculateproductPrices(): number {
+	function calculateProductPrices(): number {
 		let total = 0;
-		cart.subscribe((cart) => {
+		cart.subscribe(($cart) => {
 			{
-				cart.forEach((product) => {
+				$cart.forEach((product) => {
 					total += product.price;
 				});
 			}
 		});
 		return total;
 	}
-	export const TotalPrice = calculateTotalPrice();
 
 	function calculateTotalPrice(): number {
 		let totalPrice = 0;
-		cart.subscribe((cart) => {
-			cart.forEach((product: CartProductProps) => {
+		cart.subscribe(($cart) => {
+			$cart.forEach((product: CartProductProps) => {
 				totalPrice += product.price * product.quantity;
 			});
 		});
@@ -36,7 +35,7 @@
 		<h1>Sous-total</h1>
 		<span
 			>{new Intl.NumberFormat('en-IN', { maximumSignificantDigits: 3 }).format(
-				calculateproductPrices()
+				calculateProductPrices()
 			)} DZD</span
 		>
 	</div>
@@ -53,7 +52,7 @@
 		</span>
 	</div>
 	<hr />
-	<div class="bottom-Confirmation-side">
+	<div class="bottom-confirmation-side">
 		<div>
 			<h1>Total</h1>
 			<span class="total-price-confirmation">
@@ -115,12 +114,12 @@
 		color: hsla(0, 41%, 54%, 0.45);
 		font-weight: 700;
 	}
-	.bottom-Confirmation-side {
+	.bottom-confirmation-side {
 		display: flex;
 		flex-direction: column;
 		gap: 2rem;
 	}
-	.bottom-Confirmation-side div {
+	.bottom-confirmation-side div {
 		display: flex;
 		width: 100%;
 	}
@@ -142,7 +141,7 @@
 		.confirmation-side .validation {
 			margin-top: 0rem;
 		}
-		.bottom-Confirmation-side {
+		.bottom-confirmation-side {
 			margin-top: 2rem;
 		}
 	}
@@ -153,7 +152,7 @@
 		.confirmation-side .validation {
 			margin-top: 0rem;
 		}
-		.bottom-Confirmation-side {
+		.bottom-confirmation-side {
 			margin-top: 2rem;
 		}
 	}

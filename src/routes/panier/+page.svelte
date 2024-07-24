@@ -1,7 +1,7 @@
 <script lang="ts">
 	import HeaderTopContainer from '$lib/components/HeaderTopContainer.svelte';
-	import ProductForCartPage from '$lib/components/CartPage/ProductForCartPage.svelte';
-	import ResposiveSideCart from '$lib/components/CartPage/ResposiveSideCart.svelte';
+	import ProductForCartPage from '$lib/components/CartPage/CartPagePrduct.svelte';
+	import ResposiveSideCart from '$lib/components/CartPage/ResponsiveProductCart.svelte';
 	import ConfirmationSideforCartPage from '$lib/components/CartPage/ConfirmationSideforCartPage.svelte';
 	import { cart } from '$lib/stores/cart_store';
 	import { products } from '$lib/stores/products_store';
@@ -38,18 +38,18 @@
 						<ProductForCartPage {product} />
 					{/each}
 				</tbody>
+			</table>
+			<div class="resposive-side">
+				<table class="table-phone">
+					{#each $cart as product (product.name)}
+						<ResposiveSideCart {product} />
+					{/each}
 				</table>
-				<div class="resposive-side">
-					<table class="table-phone">
-						{#each $cart as product (product.name)}
-							<ResposiveSideCart {product} />
-						{/each}
-					</table>
-				</div>
-			<ConfirmationSideforCartPage />
 			</div>
+			<ConfirmationSideforCartPage />
 		</div>
-	</main>
+	</div>
+</main>
 
 <style>
 	nav {
