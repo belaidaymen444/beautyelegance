@@ -1,10 +1,14 @@
 <script lang="ts">
 	import HeaderTopContainer from '$lib/components/HeaderTopContainer.svelte';
-	import productImage from '$lib/assets/Sample Imgs/Products Imgs/photo_19.jpg';
 	import ProductForCartPage from '$lib/components/CartPage/ProductForCartPage.svelte';
 	import ResposiveSideCart from '$lib/components/CartPage/ResposiveSideCart.svelte';
 	import ConfirmationSideforCartPage from '$lib/components/CartPage/ConfirmationSideforCartPage.svelte';
 	import { cart } from '$lib/stores/cart_store';
+	import { products } from '$lib/stores/products_store';
+	let isrunned = false
+	
+
+	
 </script>
 
 <svelte:head>
@@ -34,7 +38,7 @@
 				</thead>
 				<tbody class="add-many-products">
 					{#each $cart as product (product.name)}
-						<ProductForCartPage {product} />
+					<ProductForCartPage {product} />
 					{/each}
 				</tbody>
 			</table>
@@ -42,11 +46,12 @@
 				<table class="table-phone">
 					{#each $cart as product (product.name)}
 						<ResposiveSideCart {product} />
-					{/each}
-				</table>
-			</div>
+						{/each}
+					</table>
+				</div>
+			
+							<ConfirmationSideforCartPage />
 
-			<ConfirmationSideforCartPage {product} />
 		</div>
 	</div>
 </main>

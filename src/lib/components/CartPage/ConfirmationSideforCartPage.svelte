@@ -1,52 +1,75 @@
-
 <script lang="ts">
-import { cart } from "$lib/stores/cart_store";
+	import { cart } from "$lib/stores/cart_store";
+	import Product from "../Product.svelte";
+	import { products } from "$lib/stores/products_store";
+	import { onMount } from "svelte";
 
- export let product: CartProductProps;
- 
+     
+    function calculateproductPrices (): number{
+		let total = 0;
+		cart.subscribe((cart)=> {{
+			cart.forEach((product) => {
+				total += product.price 
+				})
+		}})
+		return total
+	}
+	export const TotalPrice= calculateTotalPrice();
+	
+function calculateTotalPrice(): number {
+  let totalPrice = 0;
+  cart.subscribe((cart) => {
+    cart.forEach((product: CartProductProps) => {
+      totalPrice += product.price * product.quantity;
+    });
+});
+
+  return totalPrice;
+}
+    
+	
+
+
+   
+	 
 </script>
 
-
-
-
-
-
-
-
-
-
 <div class="confirmation-side">
-    <h1 class="total-cart-title">TOTAL PANIER</h1>
+	<h1 class="total-cart-title">TOTAL PANIER</h1>
 
-    <div>
-        <h1>Sous-total</h1>
-        <span> </span>
-    </div>
-    <hr />
-    <div>
-        <h1>Expédition</h1>
-        <span
-            >Saisissez votre adresse pour <br />voir les options de livraison
-            <br />
-            <br />
-            <span class="link-Calcule">
-                Calculer les frais <br /> d’expédition
-            </span>
-        </span>
-    </div>
-    <hr />
-    <div class="bottom-Confirmation-side">
-        <div>
-            <h1>Total</h1>
-            <span class="total-price-confirmation" >{new Intl.NumberFormat('en-US', { minimumFractionDigits: 2 }).format(product.price * product.quantity )} DZD</span>
-        </div>
+	<div>
+		<h1>Sous-total</h1>
+		<span>{  new Intl.NumberFormat('en-IN', { maximumSignificantDigits: 3 }).format(
+    calculateproductPrices())} DZD</span>
+	</div>
+	<hr />
+	<div>
+		<h1>Expédition</h1>
+		<span
+			>Saisissez votre adresse pour <br />voir les options de livraison
+			<br />
+			<br />
+			<span class="link-Calcule">
+				Calculer les frais <br /> d’expédition
+			</span>
+		</span>
+	</div>
+	<hr />
+	<div class="bottom-Confirmation-side">
+		<div>
+			<h1>Total</h1>
+			<span class="total-price-confirmation"> {  new Intl.NumberFormat('en-IN', { maximumSignificantDigits: 3 }).format(
+   calculateTotalPrice())}  DZD   </span
+				
+			>
+		</div>
 
-        <button class="validation"   >VALIDER LA COMMANDE</button>
-    </div>
+		<button class="validation">VALIDER LA COMMANDE</button>
+	</div>
 </div>
 
 <style>
-    .confirmation-side {
+	.confirmation-side {
 		display: flex;
 		border-radius: 32px;
 		border: 4px solid rgba(128, 128, 128, 0.185);
@@ -108,12 +131,11 @@ import { cart } from "$lib/stores/cart_store";
 		font-weight: 700;
 		-webkit-text-stroke: rgb(77, 77, 77) 0.1px;
 	}
-    hr {
+	hr {
 		border: solid 1px rgba(128, 128, 128, 0.185);
 	}
-    @media (min-width: 660px) and (max-width: 1050px) {
-
-        .confirmation-side {
+	@media (min-width: 660px) and (max-width: 1050px) {
+		.confirmation-side {
 			display: flex;
 			flex-direction: column;
 			width: 100%;
@@ -124,17 +146,16 @@ import { cart } from "$lib/stores/cart_store";
 		.bottom-Confirmation-side {
 			margin-top: 2rem;
 		}
-}
-    @media (max-width: 660px) {
-        .confirmation-side {
+	}
+	@media (max-width: 660px) {
+		.confirmation-side {
 			width: 100%;
 		}
-        .confirmation-side .validation {
+		.confirmation-side .validation {
 			margin-top: 0rem;
 		}
 		.bottom-Confirmation-side {
 			margin-top: 2rem;
 		}
-    }
-
+	}
 </style>

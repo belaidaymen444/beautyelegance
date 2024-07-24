@@ -1,8 +1,10 @@
 <script lang="ts">
     import { cart } from "$lib/stores/cart_store";
     import deletIcon from '$lib/assets/icons/deletcartproduct.svg';
-    import MediaQuery from 'svelte-media-queries';
+    import { products } from '$lib/stores/products_store';
 	export let product: CartProductProps;
+	
+	
 	
 
 
@@ -26,7 +28,7 @@
             <td>
                 <div class="Qte-general-input">
                     <input class="leftbt" type="button" value="+" on:click={ () => cart.add(product) }/>
-                    <input class="QTE" type="number"  value = {product.quantity} />
+                    <input class="QTE" type="number"  value = {product.quantity} disabled/>
                     <input class="rightbt" type="button" value="-" on:click={ () => cart.remove(product,false)} />
                 </div>
             </td>
