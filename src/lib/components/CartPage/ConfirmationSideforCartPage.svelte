@@ -3,6 +3,9 @@
 	import Product from '../Product.svelte';
 	import { products } from '$lib/stores/products_store';
 	import { onMount } from 'svelte';
+	import InfoContainer from '$lib/components/InfoContainer.svelte';
+	import FeaturesContainer from '$lib/components/FeaturesContainer.svelte';
+    import MediaQuery from 'svelte-media-queries';
 
 	function calculateProductPrices(): number {
 		let total = 0;
@@ -65,6 +68,19 @@
 		<button class="validation">VALIDER LA COMMANDE</button>
 	</div>
 </div>
+
+<MediaQuery query="(max-width: 1050px)" let:matches>
+    {#if matches }
+	<footer>
+		<h2 class="footer-title">A propose de nous</h2>
+		<div class="container">
+			<InfoContainer />
+			<FeaturesContainer />
+		</div>
+		<div class="copyright-container">&copy; 2024 Beaute & Elegance. All rights reserved.</div>
+	</footer>
+	{/if}
+</MediaQuery>
 
 <style>
 	.confirmation-side {
@@ -131,6 +147,37 @@
 	}
 	hr {
 		border: solid 1px rgba(128, 128, 128, 0.185);
+	}
+	footer {
+		margin-top: 2rem;
+	}
+
+	.footer-title {
+		font-family: 'Abril Fatface';
+		font-weight: lighter;
+		text-align: center;
+	}
+	footer .container {
+		display: flex;
+		margin-top: 5rem;
+		align-items: start;
+		justify-content: space-evenly;
+		gap: 4rem;
+		flex-wrap: wrap;
+		padding-inline: 3rem;
+	}
+	.copyright-container {
+		margin-top: 8rem;
+		min-height: 5rem;
+		background: #f0d9d9;
+		display: grid;
+		place-content: center;
+	}
+
+	@media (max-width: 365px) {
+		.copyright-container {
+			font-size: 1.3rem;
+		}
 	}
 	@media (min-width: 660px) and (max-width: 1050px) {
 		.confirmation-side {
