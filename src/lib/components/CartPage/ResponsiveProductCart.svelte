@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { cart } from '$lib/stores/cart_store';
 	import deletIcon from '$lib/assets/icons/deletcartproduct.svg';
-
 	export let product: CartProductProps;
+	
 </script>
 <tr class="top-part">
 	<td>

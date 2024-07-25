@@ -6,6 +6,8 @@
 	import InfoContainer from '$lib/components/InfoContainer.svelte';
 	import FeaturesContainer from '$lib/components/FeaturesContainer.svelte';
     import MediaQuery from 'svelte-media-queries';
+	import {initialPrice} from '$lib/stores/total_price_store'
+	
 
 	function calculateProductPrices(): number {
 		let totalPrice = 0;
@@ -18,9 +20,11 @@
 		});
 		return totalPrice;
 	}
+	
+
 
 	function calculateTotalPrice(): number {
-		let totalPriceQte = 0;
+		var totalPriceQte = 0;
 		cart.subscribe(($cart) => {
 			$cart.forEach((product: CartProductProps) => {
 				totalPriceQte += product.price * product.quantity;
@@ -60,7 +64,7 @@
 			<h1>Total</h1>
 			<span class="total-price-confirmation">
 				{new Intl.NumberFormat('en-IN', { maximumSignificantDigits: 3 }).format(
-					calculateTotalPrice()
+					calculateTotalPrice() 
 				)} DZD
 			</span>
 		</div>

@@ -49,7 +49,7 @@
 					{/each}
 				</table>
 			</div>
-			<ConfirmationSideforCartPage />
+			<ConfirmationSideforCartPage   />
 		</div>
 	</div>
 </main>
