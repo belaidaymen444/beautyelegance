@@ -16,10 +16,11 @@
 			<img src={transparentHeartIcon} alt="transparent-heart" />
 		{/if}
 	</button>
-	<div class="product-img-container">
-		<img src={product.imgUrl} alt={product.name} />
-	</div>
-
+	<a href="/singleProductUI">
+		<div class="product-img-container">
+			<img src={product.imgUrl} alt={product.name} />
+		</div>
+	</a>
 	<div class="product-details-text-container">
 		<div class="product_name-and-description-container">
 			<h3>{product.name}</h3>
