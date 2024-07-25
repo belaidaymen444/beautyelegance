@@ -8,26 +8,26 @@
     import MediaQuery from 'svelte-media-queries';
 
 	function calculateProductPrices(): number {
-		let total = 0;
+		let totalPrice = 0;
 		cart.subscribe(($cart) => {
 			{
 				$cart.forEach((product) => {
-					total += product.price;
+					totalPrice += product.price;
 				});
 			}
 		});
-		return total;
+		return totalPrice;
 	}
 
 	function calculateTotalPrice(): number {
-		let totalPrice = 0;
+		let totalPriceQte = 0;
 		cart.subscribe(($cart) => {
 			$cart.forEach((product: CartProductProps) => {
-				totalPrice += product.price * product.quantity;
+				totalPriceQte += product.price * product.quantity;
 			});
 		});
 
-		return totalPrice;
+		return totalPriceQte;
 	}
 </script>
 
