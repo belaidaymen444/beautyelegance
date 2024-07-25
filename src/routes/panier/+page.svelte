@@ -171,11 +171,15 @@
 			flex-direction: column;
 			align-items: center;
 			justify-content: start;
+			margin: 0;
 			height: 100vh;
+			width: 100%;
 		}
 		.product-details {
 			display: flex;
 			flex-direction: column;
+			align-items: center;
+			width: 100%;
 		}
 
 		.add-many-products {

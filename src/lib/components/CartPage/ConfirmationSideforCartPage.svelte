@@ -150,6 +150,7 @@
 	}
 	footer {
 		margin-top: 2rem;
+		width: 100%;
 	}
 
 	.footer-title {
@@ -183,7 +184,7 @@
 		.confirmation-side {
 			display: flex;
 			flex-direction: column;
-			width: 100%;
+			width: 95%;
 		}
 		.confirmation-side .validation {
 			margin-top: 0rem;
