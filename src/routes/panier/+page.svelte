@@ -54,8 +54,9 @@
 	</div>
 </main>
 <MediaQuery query="(max-width: 1050px)" let:matches>
-    {#if !matches }
+	{#if !matches }
 	<footer>
+		<hr>
 		<h2 class="footer-title">A propose de nous</h2>
 		<div class="container">
 			<InfoContainer />
@@ -125,6 +126,9 @@
 		text-align: center;
 
 		padding-left: 2rem;
+	}
+	hr {
+		border: solid 1px rgba(128, 128, 128, 0.185);
 	}
 
 
