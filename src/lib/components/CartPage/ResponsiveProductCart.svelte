@@ -122,6 +122,7 @@
 		font-size: 1.2rem;
 		width: 100%;
 		position: relative;
+		margin-top: 2rem;
 	}
 	.top-part div {
 		width: 100%;
