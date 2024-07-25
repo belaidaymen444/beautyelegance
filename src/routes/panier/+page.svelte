@@ -194,12 +194,24 @@
 	
 	}
 	@media (max-width: 660px) {
+		.container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: start;
+			margin: 0;
+			height: 100vh;
+			width: 100%;
+			padding: 0;
+		}
 		.product-details {
 			display: flex;
 			flex-direction: column;
 			justify-content: baseline;
 			align-items: center;
 			margin-top: 2rem;
+			
+			width: 100%;
 		}
 
 		.main-table {
@@ -211,6 +223,8 @@
 			width: 100%;
 			justify-content: center;
 			text-align: center;
+			padding-inline: 3rem;
+			
 		}
 
 	

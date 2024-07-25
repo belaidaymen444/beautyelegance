@@ -180,7 +180,7 @@
 			font-size: 1.3rem;
 		}
 	}
-	@media (min-width: 660px) and (max-width: 1050px) {
+	@media (min-width: 661px) and (max-width: 1050px) {
 		.confirmation-side {
 			display: flex;
 			flex-direction: column;
@@ -195,7 +195,7 @@
 	}
 	@media (max-width: 660px) {
 		.confirmation-side {
-			width: 100%;
+			width: 95%;
 		}
 		.confirmation-side .validation {
 			margin-top: 0rem;
