@@ -142,6 +142,7 @@
 		font-family: 'Abril Fatface';
 		font-weight: lighter;
 		text-align: center;
+		margin-top: 2rem;
 	}
 	footer .container {
 		display: flex;
