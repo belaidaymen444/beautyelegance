@@ -1,10 +1,10 @@
 <script lang="ts">
 	import { cart } from '$lib/stores/cart_store';
 	import deletIcon from '$lib/assets/icons/deletcartproduct.svg';
-	import {initialPrice} from '$lib/stores/total_price_store'
+	import { initialPrice } from '$lib/stores/total_price_cart_store';
 	export let product: CartProductProps;
-
 </script>
+
 <tr class="top-part">
 	<td>
 		<div>
@@ -38,7 +38,6 @@
 		></td
 	>
 </tr>
-
 
 <style>
 	.delet-Button {

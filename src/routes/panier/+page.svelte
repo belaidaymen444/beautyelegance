@@ -5,7 +5,7 @@
 	import ConfirmationSideforCartPage from '$lib/components/CartPage/ConfirmationSideforCartPage.svelte';
 	import InfoContainer from '$lib/components/InfoContainer.svelte';
 	import FeaturesContainer from '$lib/components/FeaturesContainer.svelte';
-    import MediaQuery from 'svelte-media-queries';
+	import MediaQuery from 'svelte-media-queries';
 	import { cart } from '$lib/stores/cart_store';
 	import { products } from '$lib/stores/products_store';
 	let isrunned = false;
@@ -49,21 +49,21 @@
 					{/each}
 				</table>
 			</div>
-			<ConfirmationSideforCartPage   />
+			<ConfirmationSideforCartPage />
 		</div>
 	</div>
 </main>
 <MediaQuery query="(max-width: 1050px)" let:matches>
-	{#if !matches }
-	<footer>
-		<hr>
-		<h2 class="footer-title">A propose de nous</h2>
-		<div class="container">
-			<InfoContainer />
-			<FeaturesContainer />
-		</div>
-		<div class="copyright-container">&copy; 2024 Beaute & Elegance. All rights reserved.</div>
-	</footer>
+	{#if !matches}
+		<footer>
+			<hr />
+			<h2 class="footer-title">A propose de nous</h2>
+			<div class="container">
+				<InfoContainer />
+				<FeaturesContainer />
+			</div>
+			<div class="copyright-container">&copy; 2024 Beaute & Elegance. All rights reserved.</div>
+		</footer>
 	{/if}
 </MediaQuery>
 
@@ -131,9 +131,6 @@
 		border: solid 1px rgba(128, 128, 128, 0.185);
 	}
 
-
-
-
 	.resposive-side {
 		display: none;
 	}
@@ -195,7 +192,6 @@
 			margin: 0;
 			width: 100%;
 		}
-	
 	}
 	@media (max-width: 660px) {
 		.container {
@@ -214,7 +210,7 @@
 			justify-content: baseline;
 			align-items: center;
 			margin-top: 2rem;
-			
+
 			width: 100%;
 		}
 
@@ -228,10 +224,6 @@
 			justify-content: center;
 			text-align: center;
 			padding-inline: 3rem;
-			
 		}
-
-	
-
 	}
 </style>
