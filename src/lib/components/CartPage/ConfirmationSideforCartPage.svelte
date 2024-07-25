@@ -5,9 +5,15 @@
 	import { onMount } from 'svelte';
 	import InfoContainer from '$lib/components/InfoContainer.svelte';
 	import FeaturesContainer from '$lib/components/FeaturesContainer.svelte';
-    import MediaQuery from 'svelte-media-queries';
-	import {initialPrice} from '$lib/stores/total_price_store'
-	
+	import MediaQuery from 'svelte-media-queries';
+	import { initialPrice } from '$lib/stores/total_price_store';
+
+	let totalPrice = 0;
+
+	cart.subscribe(($cart) => {
+		totalPrice = $cart.reduce((acc, product) => acc + product.price * product.quantity, 0);
+		initialPrice.set(totalPrice);
+	});
 
 	function calculateProductPrices(): number {
 		let totalPrice = 0;
@@ -20,11 +26,11 @@
 		});
 		return totalPrice;
 	}
-	
+
 
 
 	function calculateTotalPrice(): number {
-		var totalPriceQte = 0;
+		let totalPriceQte = 0;
 		cart.subscribe(($cart) => {
 			$cart.forEach((product: CartProductProps) => {
 				totalPriceQte += product.price * product.quantity;
@@ -63,9 +69,7 @@
 		<div>
 			<h1>Total</h1>
 			<span class="total-price-confirmation">
-				{new Intl.NumberFormat('en-IN', { maximumSignificantDigits: 3 }).format(
-					calculateTotalPrice() 
-				)} DZD
+				{new Intl.NumberFormat('en-IN', { maximumSignificantDigits: 3 }).format($initialPrice)} DZD
 			</span>
 		</div>
 
@@ -74,15 +78,15 @@
 </div>
 
 <MediaQuery query="(max-width: 1050px)" let:matches>
-    {#if matches }
-	<footer>
-		<h2 class="footer-title">A propose de nous</h2>
-		<div class="container">
-			<InfoContainer />
-			<FeaturesContainer />
-		</div>
-		<div class="copyright-container">&copy; 2024 Beaute & Elegance. All rights reserved.</div>
-	</footer>
+	{#if matches}
+		<footer>
+			<h2 class="footer-title">A propose de nous</h2>
+			<div class="container">
+				<InfoContainer />
+				<FeaturesContainer />
+			</div>
+			<div class="copyright-container">&copy; 2024 Beaute & Elegance. All rights reserved.</div>
+		</footer>
 	{/if}
 </MediaQuery>
 
