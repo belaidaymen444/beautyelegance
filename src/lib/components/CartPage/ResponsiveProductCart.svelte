@@ -8,13 +8,13 @@
 <tr class="top-part">
 	<td>
 		<div>
-			<button class="delet-Button"><img src={deletIcon} width="13" alt="deletIcon" /></button>
+			<button class="delet-Button" on:click={() => cart.remove(product, true)} ><img src={deletIcon} width="13" alt="deletIcon" /></button>
 			<h1>{product.name}</h1>
 		</div>
 	</td>
 	<td> <img src={product.imgUrl} alt="" width="300" /> </td>
 </tr>
-<tr class="for-descraption">
+<tr class="main-descraption">
 	<td id="descraption" class="descraption"> {product.description}</td>
 </tr>
 <tr class="detail-in-phone">
@@ -40,7 +40,7 @@
 </tr>
 
 <style>
-	.delet-Button {
+	.top-part .delet-Button {
 		display: flex;
 		justify-content: center;
 		background: none;
@@ -48,7 +48,7 @@
 		outline: none;
 		cursor: pointer;
 	}
-	.descraption {
+	.main-descraption .descraption {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
@@ -56,7 +56,7 @@
 		font-weight: 600;
 		width: 35%;
 	}
-	.Prix {
+	.detail-in-phone .Prix {
 		color: #777777;
 		display: flex;
 		justify-content: center;
@@ -110,7 +110,7 @@
 		border: 2px solid #b95959;
 	}
 
-	.total-Price-X-QTE {
+	.detail-in-phone .total-Price-X-QTE {
 		color: hsla(0, 41%, 54%, 0.45);
 		font-weight: 800;
 		-webkit-text-stroke: rgb(77, 77, 77) 0.1px;
@@ -138,7 +138,7 @@
 	.top-part div h1 {
 		font-size: 2.2rem;
 	}
-	.for-descraption {
+	.main-descraption {
 		display: flex;
 		justify-content: center;
 		text-align: center;

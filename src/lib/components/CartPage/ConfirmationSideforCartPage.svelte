@@ -116,7 +116,7 @@
 		cursor: pointer;
 	}
 
-	.total-cart-title {
+	.confirmation-side .total-cart-title {
 		font-size: 2.1rem;
 		font-weight: 800;
 		margin-bottom: 2rem;
@@ -170,11 +170,7 @@
 		place-content: center;
 	}
 
-	@media (max-width: 365px) {
-		.copyright-container {
-			font-size: 1.3rem;
-		}
-	}
+
 	@media (min-width: 661px) and (max-width: 1050px) {
 		.confirmation-side {
 			display: flex;
@@ -197,6 +193,11 @@
 		}
 		.bottom-confirmation-side {
 			margin-top: 2rem;
+		}
+	}
+	@media (max-width: 365px) {
+		.copyright-container {
+			font-size: 1.3rem;
 		}
 	}
 </style>

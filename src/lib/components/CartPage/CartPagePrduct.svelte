@@ -6,7 +6,7 @@
 </script>
 
 <tr class="details">
-	<td><button class="delet-Button"><img src={deletIcon} width="13" alt="deletIcon" /></button></td>
+	<td><button class="delet-Button" on:click={() => cart.remove(product, true)} ><img src={deletIcon} width="13" alt="deletIcon"/></button></td>
 	<td><img src={product.imgUrl} alt="" width="100" /></td>
 	<td class="descraption">
 		{product.description}
@@ -48,7 +48,7 @@
 		margin-right: 2rem;
 	}
 
-	.delet-Button {
+	.details .delet-Button {
 		display: flex;
 		justify-content: center;
 		background: none;
@@ -56,7 +56,7 @@
 		outline: none;
 		cursor: pointer;
 	}
-	.descraption {
+	.details .descraption {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
@@ -64,7 +64,7 @@
 		font-weight: 600;
 		width: 35%;
 	}
-	.Prix {
+	.details .Prix {
 		color: #777777;
 		display: flex;
 		justify-content: center;
@@ -118,15 +118,11 @@
 		border: 2px solid #b95959;
 	}
 
-	.total-Price-X-QTE {
+	.details .total-Price-X-QTE {
 		color: hsla(0, 41%, 54%, 0.45);
 		font-weight: 800;
 		-webkit-text-stroke: rgb(77, 77, 77) 0.1px;
 	}
 
-	@media (max-width: 700px) {
-		.details {
-			padding: 0;
-		}
-	}
+
 </style>
