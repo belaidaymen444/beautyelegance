@@ -124,7 +124,7 @@
 		font-weight: 800;
 		-webkit-text-stroke: rgb(77, 77, 77) 0.1px;
 		width: 12rem;
-		background: #0000003a;
+		
 	}
 
 
