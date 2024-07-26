@@ -17,17 +17,17 @@
 </script>
 
 <div class="container">
-    <img class="product-img" width="400" src={$selectedProduct?.imgUrl} alt="" />
+    <img class="product-img" width="100" src={$selectedProduct?.imgUrl} alt="" />
 
     <div class="right-elements">
         <div class="text-container"></div>
         <div class="title-continer">
             <h1>{$selectedProduct?.name}</h1>
-            <p class="small-detail">{$selectedProduct?.description}</p>
+            <p class="small-detail">{$selectedProduct?.description} </p>
         </div>
         <div class="price-container">
             <hr />
-            <p class="price">{$selectedProduct?.price}</p>
+            <p class="price">{$selectedProduct?.price} DZD</p>
             <hr />
 
         </div>
@@ -35,11 +35,11 @@
             <span>Quantité :</span>
             <div class="Qte-general-input">
                 <input class="leftbt" type="button" value="+"  />
-                <input class="QTE" type="number" value="1"  disabled />
-                <input class="rightbt" type="button" value="-"  />
+                <input class="QTE" type="number" value="1" disabled/>
+                <input class="rightbt" type="button" value="-" />
             </div>
         </div>
-		<p>Categorie :</p>
+		<p>Categorie : </p>
 		<button class="ajoute-panier" on:click={() => cart.add($selectedProduct)} >Ajouter au panier</button>
     </div>
 </div>
@@ -106,7 +106,7 @@
 		align-items: center;
 		justify-content: start;
 		gap: 2rem;
-		font-weight: 600;
+		font-weight: 700;
 		font-family: open, sans-serif;
 	}
 	.Qte-general-input {
@@ -192,5 +192,18 @@
 			flex-wrap: wrap;
 			padding-bottom: 9rem;
 		}
+		.container .right-elements {
+	
+		height: 65%;
+		padding-bottom: 5rem;
+		
+       
+	}
+	.product-img {
+		border: none;
+		
+	
+        
+	}
 	}
 </style>
