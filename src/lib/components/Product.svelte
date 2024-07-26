@@ -16,7 +16,7 @@
 			<img src={transparentHeartIcon} alt="transparent-heart" />
 		{/if}
 	</button>
-	<a href="/singleProductUI">
+	<a href="/singleproductUI">
 		<div class="product-img-container">
 			<img src={product.imgUrl} alt={product.name} />
 		</div>

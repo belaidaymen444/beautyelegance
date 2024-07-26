@@ -68,6 +68,7 @@
 		color: #777777;
 		display: flex;
 		justify-content: center;
+		width: 10rem;
 	}
 	.Qte-general-input {
 		display: flex;
@@ -122,6 +123,8 @@
 		color: hsla(0, 41%, 54%, 0.45);
 		font-weight: 800;
 		-webkit-text-stroke: rgb(77, 77, 77) 0.1px;
+		width: 12rem;
+		background: #0000003a;
 	}
 
 
