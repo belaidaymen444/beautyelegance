@@ -23,7 +23,12 @@
 
             </div>
 			<div class="Qte">
-				<p>Quantité :</p>
+				<span>Quantité :</span>
+				<div class="Qte-general-input">
+					<input class="leftbt" type="button" value="+"  />
+					<input class="QTE" type="number" value="1"  disabled />
+					<input class="rightbt" type="button" value="-"  />
+				</div>
 			</div>
 			<button class="ajoute-panier">Ajouter au panier</button>
 		</div>
@@ -80,9 +85,8 @@
     }
 	.right-elements p, .right-elements h1 {
 		display: flex;
-
-		font-weight: 600;
 		width: 100%;
+		font-weight: 600;
 		font-family: open, sans-serif;
 	}
 	.title-continer {
@@ -94,7 +98,66 @@
 		color: gray;
 	}
 	.Qte {
+		display: flex;
 		width: 100%;
+		align-items: center;
+		justify-content: start;
+		gap: 2rem;
+		font-weight: 600;
+		font-family: open, sans-serif;
+	}
+	.Qte-general-input {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-collapse: collapse;
+
+		overflow: hidden;
+		width: 12vh;
+		height: 7vh;
+
+		font-size: 2rem;
+	}
+	.Qte-general-input input[type='button'] {
+		display: flex;
+		border: 2px solid rgba(128, 128, 128, 0.349);
+		font-size: 1.7rem;
+		width: 40%;
+		outline: none;
+		height: 100%;
+		transition: 0.3s;
+		background-color: white;
+	}
+	.Qte-general-input input[type='number'] {
+		display: flex;
+		align-items: center;
+		text-align: center;
+		border: none;
+		width: 60%;
+		height: 100%;
+		outline: none;
+		border-block: 2px solid rgba(128, 128, 128, 0.349);
+		font-size: 1.7rem;
+	}
+	.Qte-general-input .rightbt {
+		border-top-right-radius: 100px;
+		border-bottom-right-radius:100px;
+	}
+	.Qte-general-input .leftbt {
+		border-top-left-radius:100px;
+		border-bottom-left-radius: 100px;
+	}
+
+	.Qte-general-input .leftbt:hover,
+	.Qte-general-input .rightbt:hover {
+		background: #b95959;
+		cursor: pointer;
+		border: 2px solid #b95959;
+	}
+
+	.Qte input[type='number']::-webkit-inner-spin-button,
+	.Qte input[type='number']::-webkit-outer-spin-button {
+		-webkit-appearance: none;
 	}
 	.price {
 		font-size: 3rem;
