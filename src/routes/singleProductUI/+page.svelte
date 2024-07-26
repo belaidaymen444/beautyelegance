@@ -1,38 +1,22 @@
 <script lang="ts">
 	import HeaderTopContainer from '$lib/components/HeaderTopContainer.svelte';
+	import ProductUI from '$lib/components/SingleProductUI/ProductUI.svelte';
 	import imgUrl from '$lib/assets/Sample Imgs/Products Imgs/photo_19.jpg';
+	import { products } from "$lib/stores/products_store";
+	import Cart from '$lib/components/Cart.svelte';
 	import { cart } from '$lib/stores/cart_store';
 </script>
 
 <HeaderTopContainer />
 
 <main>
-	<div class="container">
-		<img class="product-img" width="400" src={imgUrl} alt="" />
 
-		<div class="right-elements">
-			<div class="text-container"></div>
-			<div class="title-continer">
-				<h1>GRACIAS Shampoing sans Sulfate à l’huile de figue de Barbarie230ML</h1>
-				<p class="small-detail">shampoing sans sulfate 250ml</p>
-			</div>
-            <div class="price-container">
-                <hr />
-                <p class="price">550.00 DZD</p>
-                <hr />
 
-            </div>
-			<div class="Qte">
-				<span>Quantité :</span>
-				<div class="Qte-general-input">
-					<input class="leftbt" type="button" value="+"  />
-					<input class="QTE" type="number" value="1"  disabled />
-					<input class="rightbt" type="button" value="-"  />
-				</div>
-			</div>
-			<button class="ajoute-panier">Ajouter au panier</button>
-		</div>
-	</div>
+	<Cart />
+	<ProductUI/>
+
+
+
 </main>
 
 <style>

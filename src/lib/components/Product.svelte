@@ -2,8 +2,11 @@
 	import transparentHeartIcon from '$lib/assets/icons/heart-transparent.svg';
 	import redHeartIcon from '$lib/assets/icons/heart-red.svg';
 	import { cart } from '$lib/stores/cart_store';
-
+	import { selectedProduct } from '$lib/stores/selected_product_store';
 	export let product: ProductProps;
+	  function handleProductClick() {
+    selectedProduct.set(product);
+  }
 
 	let favorite = false;
 </script>
@@ -16,7 +19,7 @@
 			<img src={transparentHeartIcon} alt="transparent-heart" />
 		{/if}
 	</button>
-	<a href="/singleproductUI">
+	<a href="/singleproductUI" on:click={handleProductClick}>
 		<div class="product-img-container">
 			<img src={product.imgUrl} alt={product.name} />
 		</div>
