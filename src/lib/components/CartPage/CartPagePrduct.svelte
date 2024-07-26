@@ -103,12 +103,12 @@
 		font-size: 1.7rem;
 	}
 	.Qte-general-input .rightbt {
-		border-top-right-radius: 50px;
-		border-bottom-right-radius: 50px;
+		border-top-right-radius: 100px;
+		border-bottom-right-radius:100px;
 	}
 	.Qte-general-input .leftbt {
-		border-top-left-radius: 50px;
-		border-bottom-left-radius: 50px;
+		border-top-left-radius:100px;
+		border-bottom-left-radius: 100px;
 	}
 
 	.Qte-general-input .leftbt:hover,

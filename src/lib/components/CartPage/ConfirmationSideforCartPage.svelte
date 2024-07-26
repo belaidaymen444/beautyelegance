@@ -169,7 +169,14 @@
 		display: grid;
 		place-content: center;
 	}
+    @media (min-width: 1367px) {
+		.confirmation-side {
+			height: 80%;
+			width: 55vh;
+		}
 
+
+	}
 
 	@media (min-width: 661px) and (max-width: 1050px) {
 		.confirmation-side {
