@@ -3,7 +3,7 @@
 	import { selectedProduct } from '$lib/stores/selected_product_store';
 	import { cart } from '$lib/stores/cart_store';
 
-	console.log($selectedProduct)
+	
 
 
 	/*for (let key in $products) {
@@ -12,6 +12,7 @@
   }
 }
 */
+
   
 </script>
 
@@ -38,7 +39,8 @@
                 <input class="rightbt" type="button" value="-"  />
             </div>
         </div>
-        <button class="ajoute-panier">Ajouter au panier</button>
+		<p>Categorie :</p>
+		<button class="ajoute-panier" on:click={() => cart.add($selectedProduct)} >Ajouter au panier</button>
     </div>
 </div>
 
@@ -93,6 +95,7 @@
 		display: flex;
 		flex-direction: column;
 		gap: 1rem;
+		width: 100%;
 	}
 	.small-detail {
 		color: gray;
@@ -173,6 +176,21 @@
 		color: white;
 		font-size: 1.8rem;
 		font-weight: 800;
-		transition: 0.5s;
+		transition: 0.3s;
+	}
+	.ajoute-panier:hover {
+		background-color: #b95959;
+		cursor: pointer;
+	}
+	hr {
+		border: solid 1px rgba(128, 128, 128, 0.185);
+	}
+
+	@media (max-width : 1050px){
+		.container{
+			display: flex;
+			flex-wrap: wrap;
+			padding-bottom: 9rem;
+		}
 	}
 </style>
