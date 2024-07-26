@@ -1,7 +1,7 @@
 <script lang="ts">
     import { products } from "$lib/stores/products_store";
 	import { selectedProduct } from '$lib/stores/selected_product_store';
-	
+	import { cart } from '$lib/stores/cart_store';
 
 	console.log($selectedProduct)
 

@@ -1,7 +1,7 @@
 <script lang="ts">
 	import HeaderTopContainer from '$lib/components/HeaderTopContainer.svelte';
 	import ProductUI from '$lib/components/SingleProductUI/ProductUI.svelte';
-	import imgUrl from '$lib/assets/Sample Imgs/Products Imgs/photo_19.jpg';
+	
 	import { products } from "$lib/stores/products_store";
 	import Cart from '$lib/components/Cart.svelte';
 	import { cart } from '$lib/stores/cart_store';
