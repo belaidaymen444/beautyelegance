@@ -1,57 +1,44 @@
 <script lang="ts">
 	import HeaderTopContainer from '$lib/components/HeaderTopContainer.svelte';
 	import ProductUI from '$lib/components/SingleProductUI/ProductUI.svelte';
-	
-	import { products } from "$lib/stores/products_store";
+
+	import { products } from '$lib/stores/products_store';
 	import Cart from '$lib/components/Cart.svelte';
 	import { cart } from '$lib/stores/cart_store';
-	
 </script>
 
 <HeaderTopContainer />
 
 <main>
-
-
 	<Cart />
-	<ProductUI/>
-
-
-
+	<ProductUI />
 </main>
 
 <style>
-
-    main{
-        display: flex;
-        
-        
-      
-    }
+	main {
+		display: flex;
+	}
 
 	.container {
 		display: flex;
-		
+
 		align-items: center;
 		width: 100%;
 		gap: 5rem;
 		padding: 2rem;
-       
 	}
 	.product-img {
 		border: 5px solid rgba(107, 107, 107, 0.164);
 		border-radius: 50px;
 		width: 70vh;
-        
 	}
 	.container .right-elements {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-        justify-content: space-between;
+		justify-content: space-between;
 		height: 100%;
 		width: 100%;
-       
 	}
 	.text-container {
 		display: flex;
@@ -59,16 +46,14 @@
 		align-items: left;
 		justify-content: center;
 		width: 100%;
-        
-
 	}
-    .price-container{
-        display: flex; 
-        flex-direction: column;
-        width: 100%;
-
-    }
-	.right-elements p, .right-elements h1 {
+	.price-container {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+	}
+	.right-elements p,
+	.right-elements h1 {
 		display: flex;
 		width: 100%;
 		font-weight: 600;
@@ -126,10 +111,10 @@
 	}
 	.Qte-general-input .rightbt {
 		border-top-right-radius: 100px;
-		border-bottom-right-radius:100px;
+		border-bottom-right-radius: 100px;
 	}
 	.Qte-general-input .leftbt {
-		border-top-left-radius:100px;
+		border-top-left-radius: 100px;
 		border-bottom-left-radius: 100px;
 	}
 
@@ -147,7 +132,7 @@
 	.price {
 		font-size: 3rem;
 		color: hsla(0, 41%, 54%, 0.452);
-        margin-block: 2rem;
+		margin-block: 2rem;
 	}
 	.ajoute-panier {
 		border: none;
