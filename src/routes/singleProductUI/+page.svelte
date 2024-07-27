@@ -5,6 +5,7 @@
 	import { products } from "$lib/stores/products_store";
 	import Cart from '$lib/components/Cart.svelte';
 	import { cart } from '$lib/stores/cart_store';
+	
 </script>
 
 <HeaderTopContainer />
