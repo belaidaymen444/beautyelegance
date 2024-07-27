@@ -40,7 +40,7 @@
             </div>
         </div>
 		<p>Categorie : </p>
-		<button class="ajoute-panier" on:click={() => cart.add($selectedProduct)} >Ajouter au panier</button>
+		<button class="ajoute-panier" >Ajouter au panier</button>
     </div>
 </div>
 
