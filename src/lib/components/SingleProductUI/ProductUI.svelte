@@ -57,7 +57,7 @@
 	.product-img {
 		border: 5px solid rgba(107, 107, 107, 0.164);
 		border-radius: 50px;
-		width: 135vh;
+		width: 120vh;
 		height: 70vh;
         
 	}

@@ -19,7 +19,7 @@
 			<img src={transparentHeartIcon} alt="transparent-heart" />
 		{/if}
 	</button>
-	<a href="/singleproductUI" on:click={handleProductClick}>
+	<a class="product-hover" href="/singleproductUI" on:click={handleProductClick}>
 		<div class="product-img-container">
 			<img src={product.imgUrl} alt={product.name} />
 		</div>
@@ -71,6 +71,13 @@
 		justify-content: center;
 		background: #fafafa;
 		margin-bottom: 1.5rem;
+		transform: translateY(0);
+		transition: 0.3s;
+	}
+	.product-img-container:hover{
+		transform: translateY(-1rem);
+		box-shadow: 0 5px 10px -7px gray;
+
 	}
 	.product-img-container img {
 		width: 92%;
@@ -124,5 +131,8 @@
 		outline-color: var(--text-color);
 		background: #fff;
 		color: var(--text-color);
+	}
+	.product-hover{
+	
 	}
 </style>
