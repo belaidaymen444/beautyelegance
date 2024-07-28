@@ -12,7 +12,7 @@
 </script>
 
 <div class="product-details-container">
-	<button class="favorite-btn" on:click={() => (favorite = !favorite)}>
+	<button class="favorite-btn" on:click={() => (favorite = !favorite)} >
 		{#if favorite}
 			<img src={redHeartIcon} alt="red-heart" />
 		{:else}
